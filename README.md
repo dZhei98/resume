@@ -28,7 +28,7 @@ Joshua Nee's personal portfolio website to showcase experience, projects, and sk
 1. **Clone the Repository**
 
    ```
-   git clone https://github.com/joshuan98/resume
+   git clone https://github.com/dzhei98/resume
    cd resume
    ```
 
