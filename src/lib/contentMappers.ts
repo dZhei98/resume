@@ -13,8 +13,8 @@ export const mapWorkItems = (
   accents: AccentPalette
 ): ContentRowItem[] =>
   entries.map((experience, index) => ({
-    title: experience.position,
-    meta: experience.dateRange,
+    title: experience.company,
+    meta: `${experience.position} · ${experience.location} · ${experience.dateRange}`,
     accent: accents[index % accents.length],
     imageSrc: experience.image?.src,
     imageAlt: experience.image?.alt,

@@ -16,9 +16,10 @@ import type { ContentRow } from "@/types";
 import React from "react";
 
 const hero = createHero({
-  cta: "Terminal",
-  ctaHref: "/terminal",
-  ctaIcon: "terminal.png",
+  primaryCta: [
+    { label: "Terminal", href: "/terminal", icon: "terminal.png" },
+    { label: "QR Code", href: "/qr", icon: "qr_code.png" },
+  ],
   secondaryCta: [
     { label: "LinkedIn", href: getLinkedInUrl() },
     { label: "Twitter", href: getTwitterUrl() },

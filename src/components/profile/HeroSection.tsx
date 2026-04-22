@@ -96,29 +96,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({ hero }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            {hero.cta && hero.ctaHref && (
+            {hero.primaryCta?.map((cta) => (
               <a
-                href={hero.ctaHref}
-                target={hero.ctaHref.startsWith("/") ? "_self" : "_blank"}
-                rel={
-                  hero.ctaHref.startsWith("/")
-                    ? undefined
-                    : "noopener noreferrer"
-                }
+                key={cta.href}
+                href={cta.href}
+                target={cta.href.startsWith("/") ? "_self" : "_blank"}
+                rel={cta.href.startsWith("/") ? undefined : "noopener noreferrer"}
                 className="rounded bg-white px-6 py-2 text-sm font-semibold text-black transition hover:bg-neutral-200 flex items-center gap-2"
               >
-                {hero.ctaIcon && (
+                {cta.icon ? (
                   <Image
-                    src={`/assets/${hero.ctaIcon}`}
-                    alt={hero.cta}
+                    src={`/assets/${cta.icon}`}
+                    alt={cta.label}
                     width={16}
                     height={16}
                     className="inline-block"
                   />
-                )}
-                {hero.cta}
+                ) : null}
+                {cta.label}
               </a>
-            )}
+            ))}
             {hero.secondaryCta?.map((cta) => (
               <a
                 key={cta.href}

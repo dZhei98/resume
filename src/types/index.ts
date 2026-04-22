@@ -20,14 +20,18 @@ export interface ContentRow {
   readonly withDialog?: boolean;
 }
 
+export interface HeroAction {
+  readonly label: string;
+  readonly href: string;
+  readonly icon?: string;
+}
+
 export interface ProfileHero {
   readonly eyebrow: string;
   readonly title: string;
   readonly description: string;
-  readonly cta: string;
-  readonly ctaHref?: string;
-  readonly ctaIcon?: string;
-  readonly secondaryCta?: readonly { label: string; href: string }[];
+  readonly primaryCta?: readonly HeroAction[];
+  readonly secondaryCta?: readonly HeroAction[];
   readonly imageSrc?: string;
   readonly imageAlt?: string;
   readonly imageShadow?: boolean;
@@ -37,7 +41,9 @@ export interface ProfileHero {
 }
 
 export interface WorkEntry {
+  readonly company: string;
   readonly position: string;
+  readonly location: string;
   readonly dateRange: string;
   readonly description: readonly string[];
   readonly image?: { src: string; alt: string };

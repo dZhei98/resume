@@ -10,7 +10,7 @@
       ],
       "accent": "linear-gradient(135deg, rgba(248,113,113,0.82), rgba(100,16,20,0.94))",
       "image": {
-        "src": "/assets/national_university_of_singapore.png",
+        "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       }
     },
@@ -22,7 +22,7 @@
       ],
       "accent": "linear-gradient(135deg, rgba(239,68,68,0.82), rgba(95,17,23,0.94))",
       "image": {
-        "src": "/assets/national_university_of_singapore.png",
+        "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       }
     },
@@ -34,7 +34,7 @@
       ],
       "accent": "linear-gradient(135deg, rgba(220,38,38,0.82), rgba(86,12,18,0.92))",
       "image": {
-        "src": "/assets/national_university_of_singapore.png",
+        "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       }
     },

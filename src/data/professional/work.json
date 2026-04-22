@@ -2,8 +2,23 @@
   "title": "Work Experience",
   "content": [
     {
+      "dateRange": "May 2026 – Aug 2026",
+      "company": "DoorDash",
+      "position": "Software Engineering Intern",
+      "location": "California",
+      "image": {
+        "src": "/assets/doordash.png",
+        "alt": "DoorDash"
+      },
+      "description": [
+        "Incoming Summer 2026"
+      ]
+    },
+    {
       "dateRange": "Jan 2025 – Jul 2025",
-      "position": "Shopee, Backend Software Engineer (Singapore)",
+      "company": "Shopee",
+      "position": "Backend Software Engineer",
+      "location": "Singapore",
       "image": {
         "src": "/assets/shopee.png",
         "alt": "Shopee"
@@ -18,7 +33,9 @@
     },
     {
       "dateRange": "Aug 2024 – Nov 2024",
-      "position": "Aggregate Asset Management, Software Engineering Intern (Singapore)",
+      "company": "Aggregate Asset Management",
+      "position": "Software Engineering Intern",
+      "location": "Singapore",
       "image": {
         "src": "/assets/aggregate.png",
         "alt": "Aggregate Asset Management"
@@ -31,9 +48,11 @@
     },
     {
       "dateRange": "Aug 2022 – Nov 2024",
-      "position": "National University of Singapore, Teaching Assistant (Singapore)",
+      "company": "National University of Singapore",
+      "position": "Teaching Assistant",
+      "location": "Singapore",
       "image": {
-        "src": "/assets/national_university_of_singapore.png",
+        "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
       "description": [
@@ -43,7 +62,9 @@
     },
     {
       "dateRange": "May 2024 – Aug 2024",
-      "position": "ST Engineering, Software Engineering Intern (Singapore)",
+      "company": "ST Engineering",
+      "position": "Software Engineering Intern",
+      "location": "Singapore",
       "image": {
         "src": "/assets/st_engineering.png",
         "alt": "ST Engineering"
@@ -56,7 +77,9 @@
     },
     {
       "dateRange": "Dec 2022 – Dec 2023",
-      "position": "InTune Auto, Full-Stack Software Engineer (New York)",
+      "company": "InTune Auto",
+      "position": "Full-Stack Software Engineer",
+      "location": "New York",
       "image": {
         "src": "/assets/intune.png",
         "alt": "InTune Auto"
@@ -71,7 +94,9 @@
     },
     {
       "dateRange": "Sep 2022 – Jan 2023",
-      "position": "Solutions16, Software Engineering Intern (Singapore)",
+      "company": "Solutions16",
+      "position": "Software Engineering Intern",
+      "location": "Singapore",
       "image": {
         "src": "/assets/solutions16.png",
         "alt": "Solutions16"

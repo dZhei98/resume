@@ -15,8 +15,7 @@ import type { ContentRow } from "@/types";
 import React from "react";
 
 const hero = createHero({
-  cta: "Download résumé",
-  ctaHref: "/assets/Resume_Joshua Nee.pdf",
+  primaryCta: [{ label: "Download résumé", href: "/assets/Resume_Joshua Nee.pdf" }],
   secondaryCta: [{ label: "View GitHub", href: getGitHubUrl() }],
   background:
     "radial-gradient(circle at 22% 18%, rgba(66,214,180,0.45), transparent 55%), radial-gradient(circle at 78% 20%, rgba(43,181,153,0.4), transparent 48%), linear-gradient(135deg, rgba(6,24,18,0.96), rgba(12,38,26,0.94))",
