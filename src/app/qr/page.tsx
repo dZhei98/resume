@@ -120,11 +120,15 @@ export default function QrPage() {
                   animate={{ opacity: [0.35, 0.6, 0.35] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 />
-                <div className="relative h-[320px] w-[320px] overflow-hidden rounded-[28px] p-2 shadow-[0_0_50px_rgba(229,9,20,0.18)] xl:h-[360px] xl:w-[360px]">
+                <Link
+                  href={RESUME_PATH}
+                  aria-label="Open Joshua Nee resume PDF"
+                  className="relative block h-[320px] w-[320px] overflow-hidden rounded-[28px] p-2 shadow-[0_0_50px_rgba(229,9,20,0.18)] transition hover:scale-[1.01] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300 xl:h-[360px] xl:w-[360px]"
+                >
                   {qrImageSrc ? (
                     <Image src={qrImageSrc} alt="QR code linking to Joshua Nee resume" fill className="object-contain p-5" unoptimized onError={handleQrAssetError} />
                   ) : null}
-                </div>
+                </Link>
               </div>
 
               <footer className="text-center text-sm uppercase tracking-[0.34em] text-red-100/85 sm:text-base">
@@ -182,11 +186,15 @@ export default function QrPage() {
               <div className="relative w-full max-w-[286px] overflow-hidden rounded-[30px] border border-red-500/25 bg-black/45 p-4 shadow-[0_0_36px_rgba(239,68,68,0.16),0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-xl">
                 <div className="pointer-events-none absolute inset-[1px] rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_32%,rgba(239,68,68,0.16)_100%)] opacity-80" />
                 <div className="pointer-events-none absolute -inset-px rounded-[30px] border border-red-200/10" />
-                <div className="relative aspect-square overflow-hidden rounded-[24px] p-2">
+                <Link
+                  href={RESUME_PATH}
+                  aria-label="Open Joshua Nee resume PDF"
+                  className="relative block aspect-square overflow-hidden rounded-[24px] p-2 transition hover:scale-[1.01] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
+                >
                   {qrImageSrc ? (
                     <Image src={qrImageSrc} alt="QR code linking to Joshua Nee resume" fill className="object-contain p-4" unoptimized onError={handleQrAssetError} />
                   ) : null}
-                </div>
+                </Link>
               </div>
 
               <footer className="text-center text-sm uppercase tracking-[0.24em] text-red-100/85">
