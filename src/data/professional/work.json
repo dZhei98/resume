@@ -49,20 +49,6 @@
       ]
     },
     {
-      "dateRange": "Aug 2022 – Nov 2024",
-      "company": "National University of Singapore",
-      "position": "Teaching Assistant",
-      "location": "Singapore",
-      "image": {
-        "src": "/assets/national_university_of_singapore.jpg",
-        "alt": "National University of Singapore"
-      },
-      "description": [
-        "Conducted tutorials for over 60 students across multiple modules, including Data Structures and Algorithms, Software Engineering & Object-Oriented Programming, and Introduction to Machine Learning; responsibilities included designing course materials, creating and presenting tutorial content, and weekly consultation services",
-        "Mentored 24 student teams across 2 iterations of self-directed software development projects, specializing in Unity game development, Telegram bot creation, and web application development, resulting in 17 teams achieving Apollo 11 (Advanced) level and 7 teams attaining Gemini (Intermediate) level"
-      ]
-    },
-    {
       "dateRange": "May 2024 – Aug 2024",
       "company": "ST Engineering",
       "position": "Software Engineering Intern",
