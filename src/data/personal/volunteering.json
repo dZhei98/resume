@@ -9,7 +9,6 @@
         "Partnered with Bukit Merah Secondary School to uplift 20 students from less-privileged backgrounds.",
         "Delivered mentorship sessions focused on academics, resilience, and exposure to technology careers."
       ],
-      "accent": "linear-gradient(135deg, rgba(239,68,68,0.82), rgba(82,16,20,0.92))",
       "image": {
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
@@ -24,7 +23,6 @@
         "Designed events to reinforce the school's core values, keeping sessions fresh and purposeful.",
         "Researched effective learning methods to tailor support for each student's needs."
       ],
-      "accent": "linear-gradient(135deg, rgba(248,113,113,0.82), rgba(92,18,22,0.92))",
       "image": {
         "src": "/assets/raffles_institution.png",
         "alt": "Raffles Institution"

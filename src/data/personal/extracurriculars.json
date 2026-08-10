@@ -2,13 +2,35 @@
   "title": "Extra Curricular Activities",
   "items": [
     {
+      "organization": "Carnegie Mellon University, Fun Squad",
+      "dateRange": "Spring 2026 – Fall 2026",
+      "bullets": [
+        "Orchestrated campus-wide events for 100+ students, including seasonal holiday celebrations, end-of-semester parties, and the CMU Spring Carnival.",
+        "Organized the Master's Students Orientation Programme for Spring 2026 and Fall 2026."
+      ],
+      "image": {
+        "src": "/assets/carnegie_mellon_university.jpg",
+        "alt": "Carnegie Mellon University"
+      }
+    },
+    {
+      "organization": "Carnegie Mellon University, Board Games Club",
+      "dateRange": "2026 – Present",
+      "bullets": [
+        "Co-founded the Board Games Club hosting weekly sessions."
+      ],
+      "image": {
+        "src": "/assets/carnegie_mellon_university.jpg",
+        "alt": "Carnegie Mellon University"
+      }
+    },
+    {
       "organization": "National University of Singapore, n-House Subcommittee",
       "dateRange": "Jan 2024 – May 2024",
       "bullets": [
         "Organized and coordinated two networking events, including fireside chats with Iterative's Hsu Ken Ooi and NUS Enterprise's Neelash Bhatia.",
         "Facilitated discussions with NUS NOC inbound students from multiple countries, surfacing global startup insights."
       ],
-      "accent": "linear-gradient(135deg, rgba(248,113,113,0.82), rgba(100,16,20,0.94))",
       "image": {
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
@@ -20,7 +42,6 @@
       "bullets": [
         "Led the NUS School of Computing e-Freshmen Orientation Programme for a cohort of 30 freshmen."
       ],
-      "accent": "linear-gradient(135deg, rgba(239,68,68,0.82), rgba(95,17,23,0.94))",
       "image": {
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
@@ -32,7 +53,6 @@
       "bullets": [
         "Organized the Electrical and Computer Engineering Camp for over 100 incoming freshmen, designing programming and logistics."
       ],
-      "accent": "linear-gradient(135deg, rgba(220,38,38,0.82), rgba(86,12,18,0.92))",
       "image": {
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
@@ -44,7 +64,6 @@
       "bullets": [
         "Co-led over 100 members to orchestrate the Secondary One orientation camp and mentored a class through their first year."
       ],
-      "accent": "linear-gradient(135deg, rgba(127,29,29,0.82), rgba(55,7,10,0.92))",
       "image": {
         "src": "/assets/raffles_institution.png",
         "alt": "Raffles Institution"

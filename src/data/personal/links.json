@@ -4,20 +4,17 @@
     {
       "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/joshua-nee",
-      "description": "Connect for professional updates, mentoring, and hiring conversations.",
-      "accent": "linear-gradient(135deg, rgba(37,99,235,0.85), rgba(12,28,68,0.9))"
+      "description": "Connect for professional updates, mentoring, and hiring conversations."
     },
     {
       "label": "GitHub",
       "url": "https://github.com/dzhei98",
-      "description": "Repos, experiments, and open-source contributions currently in motion.",
-      "accent": "linear-gradient(135deg, rgba(16,185,129,0.85), rgba(6,44,30,0.9))"
+      "description": "Repos, experiments, and open-source contributions currently in motion."
     },
     {
       "label": "Twitter",
       "url": "https://x.com/dZhei98",
-      "description": "Follow for thoughts on engineering, AI, and the occasional meme.",
-      "accent": "linear-gradient(135deg, rgba(248,113,113,0.82), rgba(90,18,24,0.92))"
+      "description": "Follow for thoughts on engineering, AI, and the occasional meme."
     }
   ]
 }
