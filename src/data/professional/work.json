@@ -5,13 +5,15 @@
       "dateRange": "May 2026 – Aug 2026",
       "company": "DoorDash",
       "position": "Software Engineering Intern",
-      "location": "California",
+      "location": "Sunnyvale, CA",
       "image": {
         "src": "/assets/doordash.png",
         "alt": "DoorDash"
       },
       "description": [
-        "Incoming Summer 2026"
+        "Shipped the company's first game backend (gRPC, SDUI, KV storage) a week early, serving 2,000 weekly players",
+        "Pioneered migration off the legacy stack and established the end-to-end pattern inherited by all future games",
+        "Engineered AI code generation that cut backend effort by 85% and enabled new engineers to ship independently"
       ]
     },
     {
@@ -24,11 +26,11 @@
         "alt": "Shopee"
       },
       "description": [
-        "Developed e-commerce and payment systems with Kafka/MySQL, overseeing 10K+ daily transactions",
-        "Spearheaded migration of legacy Golang microservices, cutting tech debt by 20% through modular refactor",
-        "Restored notification microservice deployability for 100+ users within 2 weeks by redesigning release workflows",
-        "Engineered nationwide features with blacklist/whitelist logic and redirect fixes, supporting 100K+ user interactions",
-        "Commenced role after early graduation; concluded tenure upon Master’s program admission"
+        "Developed cross-border e-commerce and payment system with Kafka/MySQL, processing 10M+ daily transactions",
+        "Replatformed Golang microservices onto internal library management, cutting fragmented dependencies by 90%",
+        "Restored notification microservice deployability for 100+ internal users in 2 weeks via release workflow redesign",
+        "Spearheaded nationwide updates to request routing and access control systems, supporting 100K+ user requests",
+        "Commenced role after early graduation; concluded tenure upon Master's program admission"
       ]
     },
     {
@@ -70,26 +72,26 @@
         "alt": "ST Engineering"
       },
       "description": [
-        "Prototyped Apple Vision Pro applications within 3 months of US launch, preceding Singapore release by 2 months",
         "Designed 3D interactions and live geo-tracking in Swift by reverse-engineering undocumented VisionOS behaviors",
-        "Architected reusable mixed reality components, reducing future integration time by 30%"
+        "Architected reusable mixed reality components, reducing future integration time by 30%",
+        "Prototyped Apple Vision Pro applications within 3 months of US launch, preceding Singapore release by 2 months"
       ]
     },
     {
       "dateRange": "Dec 2022 – Dec 2023",
       "company": "InTune Auto",
       "position": "Full-Stack Software Engineer",
-      "location": "New York",
+      "location": "New York, NY",
       "image": {
         "src": "/assets/intune.png",
         "alt": "InTune Auto"
       },
       "description": [
-        "Drove strategic acquisition by Highland Creek Partners through consistent full-stack product delivery",
-        "Collaborated in a 4-engineer startup team using React, Java, and PostgreSQL with end-to-end ownership",
+        "Reduced data retrieval latency by 80% by redesigning pagination and query architecture",
         "Innovated custom scheduling platform to improve enterprise booking efficiency with advanced availability logic",
-        "Reduced data retrieval latency from minutes to seconds by redesigning pagination and query architecture",
-        "Gathered and defined client requirements to ship features weekly, maintaining 99% customer retention"
+        "Gathered and defined client requirements to ship features weekly, maintaining 99% customer retention",
+        "Collaborated in a 4-engineer startup team using React, Java, and PostgreSQL following Scrumban methodology",
+        "Drove strategic acquisition by Highland Creek Partners through full-stack engineering enabling 2x user growth"
       ]
     },
     {

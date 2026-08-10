@@ -2,10 +2,29 @@
   "category": "DevOps & Observability",
   "description": "Infrastructure, deployment, and monitoring tooling enabling fast, safe delivery cycles.",
   "skills": [
-    { "name": "Amazon Web Services (EC2, S3, Lambda)", "level": "Experienced" },
-    { "name": "Docker", "level": "Experienced" },
-    { "name": "Kubernetes", "level": "Experienced" },
-    { "name": "NGINX", "level": "Experienced" },
-    { "name": "Grafana", "level": "Experienced" }
+    {
+      "name": "Amazon Web Services (EC2, S3, Lambda)",
+      "level": "Experienced"
+    },
+    {
+      "name": "Docker",
+      "level": "Experienced"
+    },
+    {
+      "name": "Kubernetes",
+      "level": "Experienced"
+    },
+    {
+      "name": "NGINX",
+      "level": "Experienced"
+    },
+    {
+      "name": "Grafana",
+      "level": "Experienced"
+    },
+    {
+      "name": "Prometheus",
+      "level": "Experienced"
+    }
   ]
 }

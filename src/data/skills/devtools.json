@@ -2,9 +2,25 @@
   "category": "Developer Tools & Productivity",
   "description": "Version control, CI/CD, and AI-assisted developer tooling used to ship software efficiently.",
   "skills": [
-    { "name": "Git", "level": "Proficient" },
-    { "name": "CI/CD Pipeline", "level": "Proficient" },
-    { "name": "Copilot", "level": "Experienced" },
-    { "name": "Codex", "level": "Experienced" }
+    {
+      "name": "Git",
+      "level": "Proficient"
+    },
+    {
+      "name": "GitLab CI/CD",
+      "level": "Proficient"
+    },
+    {
+      "name": "GitHub Actions",
+      "level": "Proficient"
+    },
+    {
+      "name": "Claude Code",
+      "level": "Experienced"
+    },
+    {
+      "name": "OpenCode",
+      "level": "Experienced"
+    }
   ]
 }

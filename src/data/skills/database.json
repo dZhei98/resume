@@ -9,18 +9,21 @@
     {
       "name": "MySQL",
       "level": "Proficient"
-    }
-    ,
+    },
     {
       "name": "MongoDB",
       "level": "Proficient"
     },
     {
       "name": "Firebase",
-      "level": "Experienced"
+      "level": "Proficient"
     },
     {
       "name": "Redis",
+      "level": "Proficient"
+    },
+    {
+      "name": "Cassandra",
       "level": "Proficient"
     }
   ]

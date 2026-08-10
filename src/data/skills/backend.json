@@ -2,9 +2,33 @@
   "category": "Backend Technologies",
   "description": "Service frameworks, messaging patterns, and APIs used to ship resilient distributed systems.",
   "skills": [
-    { "name": "Golang", "level": "Proficient" },
-    { "name": "Java", "level": "Proficient" },
-    { "name": "Node.js", "level": "Proficient" },
-    { "name": "Express.js", "level": "Proficient" }
+    {
+      "name": "Golang",
+      "level": "Proficient"
+    },
+    {
+      "name": "Java",
+      "level": "Proficient"
+    },
+    {
+      "name": "Node.js",
+      "level": "Proficient"
+    },
+    {
+      "name": "Express.js",
+      "level": "Proficient"
+    },
+    {
+      "name": "gRPC/REST",
+      "level": "Proficient"
+    },
+    {
+      "name": "Protobuf",
+      "level": "Proficient"
+    },
+    {
+      "name": "Server-Driven UI",
+      "level": "Proficient"
+    }
   ]
 }

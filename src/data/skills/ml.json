@@ -13,6 +13,26 @@
     {
       "name": "PyTorch",
       "level": "Experienced"
+    },
+    {
+      "name": "LangChain",
+      "level": "Experienced"
+    },
+    {
+      "name": "LangGraph",
+      "level": "Experienced"
+    },
+    {
+      "name": "MCP",
+      "level": "Experienced"
+    },
+    {
+      "name": "Agentic AI",
+      "level": "Experienced"
+    },
+    {
+      "name": "RAG Pipelines",
+      "level": "Experienced"
     }
   ]
 }

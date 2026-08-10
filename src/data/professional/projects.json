@@ -9,8 +9,8 @@
         "alt": "A New Agent Hackathon"
       },
       "description": [
-        "Clinched Vapi Track (200+ builders) for a tool-using LLM scheduling agent with multimodal (text + voice) dialogue.",
-        "Grounded dialogs in ClinicalTrials.gov data, integrated with Google Calendar and Supabase Edge for timetabling."
+        "Won Vapi Track (200+ builders) for a tool-using LLM scheduling agent with multimodal (text + voice) dialogue",
+        "Integrated ClinicalTrials.gov-grounded dialogues with Google Calendar and Supabase Edge for intelligent timetabling"
       ],
       "links": [
         {
@@ -27,10 +27,9 @@
         "alt": "National University of Singapore"
       },
       "description": [
-        "Led a 5-member team and owned the AI component, developing and deploying a neural network on FPGA for real-time gesture recognition.",
-        "Enhanced model accuracy through hyperparameter tuning, feature engineering, and 10× data augmentation, reducing false predictions.",
-        "Directed external communications and implemented secure TCP/IP and MQTT protocols with AES encryption, concurrency handling, and error checking.",
-        "Built and tested 1- and 2-player systems with round counters and packet validation for seamless subsystem integration."
+        "Built real-time gesture recognition system using multi-layer perceptron in TensorFlow, achieving >95% accuracy",
+        "Devised feature extraction pipeline using statistical and spectral metrics optimized with SHAP analysis",
+        "Enhanced model robustness via time-series data augmentation and hyperband-based hyperparameter tuning"
       ],
       "links": [
         {

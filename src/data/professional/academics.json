@@ -2,22 +2,42 @@
   "title": "Academics",
   "content": [
     {
-      "dateRange": "Aug 2025 - Present",
+      "dateRange": "Aug 2025 - Dec 2026",
       "institution": "Carnegie Mellon University",
       "image": {
         "src": "/assets/carnegie_mellon_university.jpg",
         "alt": "Carnegie Mellon University"
       },
       "description": [
-        "Master of Science, Software Engineering",
+        "Master of Science (M.S.) in Software Engineering",
         "QPA: 4.0 / 4.0",
-        "Expected Graduation: December 2026",
         {
-          "title": "Current Courses:",
+          "title": "Research Assistant:",
           "description": [
-            "Software Engineering",
-            "Software Testing & Operations",
-            "Computer Systems"
+            "Distributed Systems (under Professor Leonardo da Silva Sousa)"
+          ]
+        },
+        {
+          "title": "Teaching Assistant:",
+          "description": [
+            "Foundations of Computer Systems (18-613)",
+            "Introduction to Deep Learning (11-695)"
+          ]
+        },
+        {
+          "title": "Core Courses:",
+          "description": [
+            "Foundations of Computer Systems (18-613)",
+            "Distributed Systems (14-736)",
+            "Software Testing & Operations (18-654)",
+            "Introduction to Deep Learning (11-695)"
+          ]
+        },
+        {
+          "title": "Activities:",
+          "description": [
+            "Organized Master's Students Orientation Programme Spring 2026 & Fall 2026",
+            "Co-founded Board Games Club"
           ]
         }
       ]
@@ -30,26 +50,37 @@
         "alt": "National University of Singapore"
       },
       "description": [
-        "Bachelor of Engineering, Computer Engineering",
+        "Bachelor of Engineering (B.Eng.) in Computer Engineering",
+        "GPA: 3.9 / 4.0",
         "Honours (Highest Distinction)",
-        "GPA: 4.86 / 5.0",
         "Top 5% of Academic Year 2023/2024 Semester 2 & Academic Year 2024/2025 Semester 1 (Deans' List)",
         "NUS Overseas Colleges (NOC) New York, Batch 19",
         {
-          "title": "Relevant Courses:",
+          "title": "Teaching Assistant:",
           "description": [
-            "Data Structures & Algorithms",
-            "Software Engineering & OOP",
-            "Machine Learning",
-            "Operating Systems"
+            "Data Structures & Algorithms (CS2040C)",
+            "Software Engineering & Object-Oriented Programming (CS2113)",
+            "Introduction to Machine Learning (EE2211)",
+            "Independent Software Development Project, Orbital (CP2106): Advisor (2023), Advisor (2024), Mentor (2026)"
           ]
         },
         {
-          "title": "Teaching Assistant:",
+          "title": "Core Courses:",
           "description": [
-            "Data Structures & Algorithms",
-            "Software Engineering & OOP",
-            "Machine Learning"
+            "Programming Methodology (CS1010)",
+            "Data Structures & Algorithms (CS2040C)",
+            "Software Engineering & Object-Oriented Programming (CS2113)",
+            "Real-Time Operating Systems (CG2271)",
+            "Introduction to Artificial Intelligence (CS3243)",
+            "Introduction to Machine Learning (EE2211)",
+            "Computer Networks (EE4204)"
+          ]
+        },
+        {
+          "title": "Activities:",
+          "description": [
+            "Organised NUS Electrical and Computer Engineering Camp 2022",
+            "Orientation Group Leader for NUS School of Computing Orientation 2022"
           ]
         }
       ]
@@ -64,15 +95,20 @@
       "description": [
         "GCE A-Levels, Rank Points: 87.5 / 90",
         {
-          "title": "Course Work:",
+          "title": "Core Courses:",
           "description": [
-            "Higher 1 General Paper",
-            "Higher 1 Chemistry",
-            "Higher 2 Physics",
-            "Higher 2 Economics",
-            "Higher 2 Mathematics",
-            "Higher 3 SMU Game Theory",
-            "Higher 1 Project Work"
+            "Game Theory (@ Singapore Management University)",
+            "Physics",
+            "Chemistry",
+            "Mathematics",
+            "Economics"
+          ]
+        },
+        {
+          "title": "Activities:",
+          "description": [
+            "Organised Year One Orientation Camp 2016",
+            "Mentored 1 class throughout Year One"
           ]
         }
       ]
