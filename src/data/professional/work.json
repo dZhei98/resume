@@ -11,9 +11,9 @@
         "alt": "DoorDash"
       },
       "description": [
-        "Shipped the company's first game backend (gRPC, SDUI, KV storage) a week early, serving 2,000 weekly players",
-        "Pioneered migration off the legacy stack and established the end-to-end pattern inherited by all future games",
-        "Engineered AI code generation that cut backend effort by 85% and enabled new engineers to ship independently"
+        "Owned DashPass' first game backend (gRPC, SDUI, Cassandra, Redis), supporting 8M+ weekly impressions",
+        "Pioneered migration off the legacy stack and established the architecture adopted by all future games",
+        "Engineered AI code generation that cut backend effort by 85%, enabling new contributors to ship independently"
       ]
     },
     {
