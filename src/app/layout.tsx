@@ -1,17 +1,9 @@
-import AnimatedBackground from '@/components/layout/AnimatedBackground';
+import { displayFont, netflixSans } from '@/lib/fonts';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from "next";
-import { Ubuntu_Mono } from 'next/font/google';
 import React from 'react';
 import '../styles/globals.css';
-
-const ubuntu_mono = Ubuntu_Mono({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true,
-});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -79,12 +71,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${ubuntu_mono.className} antialiased bg-[#141414] text-neutral-100`}
+        className={`${netflixSans.variable} ${displayFont.variable} antialiased bg-[#141414] text-neutral-100`}
       >
-        <AnimatedBackground />
-        <div className="relative z-10">
-          {children}
-        </div>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>

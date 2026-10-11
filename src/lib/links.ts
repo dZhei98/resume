@@ -13,7 +13,7 @@ type LinksData = {
 
 const links = linksData as LinksData;
 
-export const getLink = (label: string): string => {
+const getLink = (label: string): string => {
   const link = links.links.find(
     (l) => l.label.toLowerCase() === label.toLowerCase(),
   );

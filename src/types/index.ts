@@ -2,70 +2,102 @@
  * Core type definitions for the portfolio application
  */
 
-export interface ContentRowItem {
-  readonly title: string;
-  readonly meta?: string;
-  readonly badge?: string;
-  readonly accent: string;
-  readonly imageSrc?: string;
-  readonly imageAlt?: string;
-  readonly details?: readonly string[];
-  readonly links?: readonly { label: string; url: string }[];
-  readonly skillBars?: readonly { name: string; level: string }[];
+export type ProfileId = "recruiter" | "developer" | "stalker";
+
+export type CategoryId =
+  | "experience"
+  | "projects"
+  | "education"
+  | "skills"
+  | "personal";
+
+export type TitleKind =
+  | "about"
+  | "work"
+  | "project"
+  | "hackathon"
+  | "education"
+  | "toolkit"
+  | "activity"
+  | "volunteering"
+  | "interest"
+  | "interactive";
+
+export interface TitleImage {
+  readonly src: string;
+  readonly alt: string;
+  readonly fit: "contain" | "cover";
 }
 
-export interface ContentRow {
-  readonly title: string;
-  readonly items: readonly ContentRowItem[];
-  readonly withDialog?: boolean;
+export interface TitleLink {
+  readonly label: string;
+  readonly url: string;
 }
 
-export interface HeroAction {
+export interface Episode {
+  readonly title: string;
+  readonly text?: string;
+  readonly items?: readonly string[];
+}
+
+export interface Skill {
+  readonly name: string;
+  readonly level: string;
+}
+
+export interface Award {
+  readonly label: string;
+  readonly placement: number;
+  readonly field?: number;
+}
+
+export interface Title {
+  readonly slug: string;
+  readonly kind: TitleKind;
+  readonly category: CategoryId | null;
+  readonly name: string;
+  readonly subtitle?: string;
+  readonly domain?: string;
+  readonly dateRange?: string;
+  readonly start?: string;
+  readonly end?: string | null;
+  readonly yearLabel?: string;
+  readonly synopsis: string;
+  readonly episodes: readonly Episode[];
+  readonly image?: TitleImage;
+  readonly art?: string;
+  readonly tint: string;
+  readonly links: readonly TitleLink[];
+  readonly skills?: readonly Skill[];
+  readonly href?: string;
+  readonly award?: Award;
+  readonly rank?: number;
+}
+
+export type RowVariant = "standard" | "ranked";
+
+export interface RowSpec {
+  readonly id: string;
+  readonly title: string;
+  readonly variant: RowVariant;
+  readonly slugs: readonly string[];
+}
+
+interface HeroAction {
   readonly label: string;
   readonly href: string;
-  readonly icon?: string;
-}
-
-export interface ProfileHero {
-  readonly eyebrow: string;
-  readonly title: string;
-  readonly description: string;
-  readonly primaryCta?: readonly HeroAction[];
-  readonly secondaryCta?: readonly HeroAction[];
-  readonly imageSrc?: string;
-  readonly imageAlt?: string;
-  readonly imageShadow?: boolean;
-  readonly typewriterSequence?: readonly (string | number)[];
-  readonly badge?: string;
-  readonly background: string;
-}
-
-export interface WorkEntry {
-  readonly company: string;
-  readonly position: string;
-  readonly location: string;
-  readonly dateRange: string;
-  readonly description: readonly string[];
-  readonly image?: { src: string; alt: string };
-}
-
-export interface ProjectEntry {
-  readonly title: string;
-  readonly type?: string;
-  readonly description: readonly string[];
-  readonly image?: { src: string; alt: string };
-  readonly links?: readonly { label: string; url: string }[];
 }
 
 export interface ProfileConfig {
-  readonly id: string;
+  readonly id: ProfileId;
   readonly name: string;
-  readonly accent: string;
-  readonly symbol: string;
   readonly href: string;
+  readonly avatar: string;
   readonly tagline: string;
+  readonly heroAction: HeroAction;
 }
 
-export type AccentPalette = readonly string[];
-
-export type ProfileType = "developer" | "recruiter" | "stalker";
+export interface CategoryConfig {
+  readonly id: CategoryId;
+  readonly label: string;
+}

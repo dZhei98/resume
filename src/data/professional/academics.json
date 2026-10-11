@@ -8,9 +8,16 @@
         "src": "/assets/carnegie_mellon_university.jpg",
         "alt": "Carnegie Mellon University"
       },
+      "art": "/assets/art/carnegie-mellon-university.jpg",
+      "tint": "#571919",
       "description": [
-        "Master of Science (M.S.) in Software Engineering",
-        "QPA: 4.0 / 4.0",
+        "Master of Science in Software Engineering",
+        {
+          "title": "Highlights:",
+          "description": [
+            "GPA: 4.0 / 4.0"
+          ]
+        },
         {
           "title": "Research Assistant:",
           "description": [
@@ -49,12 +56,19 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
+      "art": "/assets/art/national-university-of-singapore.jpg",
+      "tint": "#12365e",
       "description": [
-        "Bachelor of Engineering (B.Eng.) in Computer Engineering",
-        "GPA: 3.9 / 4.0",
-        "Honours (Highest Distinction)",
-        "Top 5% of Academic Year 2023/2024 Semester 2 & Academic Year 2024/2025 Semester 1 (Deans' List)",
-        "NUS Overseas Colleges (NOC) New York, Batch 19",
+        "Bachelor of Engineering in Computer Engineering",
+        {
+          "title": "Highlights:",
+          "description": [
+            "GPA: 3.9 / 4.0",
+            "Honours (Highest Distinction)",
+            "Top 5% of Academic Year 2023/2024 Semester 2 & Academic Year 2024/2025 Semester 1 (Deans' List)",
+            "NUS Overseas Colleges (NOC) New York, Batch 19"
+          ]
+        },
         {
           "title": "Teaching Assistant:",
           "description": [
@@ -92,8 +106,16 @@
         "src": "/assets/raffles_institution.png",
         "alt": "Raffles Institution"
       },
+      "art": "/assets/art/raffles-institution.jpg",
+      "tint": "#135331",
       "description": [
-        "GCE A-Levels, Rank Points: 87.5 / 90",
+        "GCE A-Levels",
+        {
+          "title": "Highlights:",
+          "description": [
+            "Rank Points: 87.5 / 90"
+          ]
+        },
         {
           "title": "Core Courses:",
           "description": [

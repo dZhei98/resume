@@ -8,7 +8,9 @@
         "Full-Stack Development",
         "Artificial Intelligence",
         "Virtual Reality"
-      ]
+      ],
+      "art": "/assets/art/passions.jpg",
+      "tint": "#271957"
     },
     {
       "label": "Off-hours",
@@ -16,7 +18,9 @@
       "items": [
         "Board Games",
         "Travelling"
-      ]
+      ],
+      "art": "/assets/art/off-hours.jpg",
+      "tint": "#12485f"
     },
     {
       "label": "Languages",
@@ -24,7 +28,9 @@
       "items": [
         "English (spoken and written)",
         "Chinese (spoken and written)"
-      ]
+      ],
+      "art": "/assets/art/languages.jpg",
+      "tint": "#604710"
     }
   ]
 }

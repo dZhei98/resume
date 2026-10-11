@@ -11,7 +11,9 @@
       "image": {
         "src": "/assets/carnegie_mellon_university.jpg",
         "alt": "Carnegie Mellon University"
-      }
+      },
+      "art": "/assets/art/carnegie-mellon-university-fun-squad.jpg",
+      "tint": "#572519"
     },
     {
       "organization": "Carnegie Mellon University, Board Games Club",
@@ -22,7 +24,9 @@
       "image": {
         "src": "/assets/carnegie_mellon_university.jpg",
         "alt": "Carnegie Mellon University"
-      }
+      },
+      "art": "/assets/art/carnegie-mellon-university-board-games-club.jpg",
+      "tint": "#195748"
     },
     {
       "organization": "National University of Singapore, n-House Subcommittee",
@@ -34,7 +38,9 @@
       "image": {
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
-      }
+      },
+      "art": "/assets/art/national-university-of-singapore-n-house-subcommittee.jpg",
+      "tint": "#602c10"
     },
     {
       "organization": "National University of Singapore, Orientation Group Leader",
@@ -45,7 +51,9 @@
       "image": {
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
-      }
+      },
+      "art": "/assets/art/national-university-of-singapore-orientation-group-leader.jpg",
+      "tint": "#603610"
     },
     {
       "organization": "National University of Singapore, Orientation Organiser",
@@ -56,7 +64,9 @@
       "image": {
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
-      }
+      },
+      "art": "/assets/art/national-university-of-singapore-orientation-organiser.jpg",
+      "tint": "#604010"
     },
     {
       "organization": "Raffles Institution, Peer Support Leader",
@@ -67,7 +77,9 @@
       "image": {
         "src": "/assets/raffles_institution.png",
         "alt": "Raffles Institution"
-      }
+      },
+      "art": "/assets/art/raffles-institution-peer-support-leader.jpg",
+      "tint": "#15562b"
     }
   ]
 }

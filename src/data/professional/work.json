@@ -10,6 +10,8 @@
         "src": "/assets/doordash.png",
         "alt": "DoorDash"
       },
+      "art": "/assets/art/doordash.jpg",
+      "tint": "#5b2215",
       "description": [
         "Owned DashPass' first game backend (gRPC, SDUI, Cassandra, Redis), supporting 8M+ weekly impressions",
         "Pioneered migration off the legacy stack and established the architecture adopted by all future games",
@@ -25,6 +27,8 @@
         "src": "/assets/shopee.png",
         "alt": "Shopee"
       },
+      "art": "/assets/art/shopee.jpg",
+      "tint": "#572819",
       "description": [
         "Developed cross-border e-commerce and payment system with Kafka/MySQL, processing 10M+ daily transactions",
         "Replatformed Golang microservices onto internal library management, cutting fragmented dependencies by 90%",
@@ -42,6 +46,8 @@
         "src": "/assets/aggregate.png",
         "alt": "Aggregate Asset Management"
       },
+      "art": "/assets/art/aggregate-asset-management.jpg",
+      "tint": "#103260",
       "description": [
         "Researched and tested S&P 500 and global index forecasting models in Python to evaluate predictive accuracy",
         "Backtested long-short momentum and risk-parity strategies, benchmarking Sharpe and volatility",
@@ -57,6 +63,8 @@
         "src": "/assets/st_engineering.png",
         "alt": "ST Engineering"
       },
+      "art": "/assets/art/st-engineering.jpg",
+      "tint": "#5c151d",
       "description": [
         "Designed 3D interactions and live geo-tracking in Swift by reverse-engineering undocumented VisionOS behaviors",
         "Architected reusable mixed reality components, reducing future integration time by 30%",
@@ -72,6 +80,8 @@
         "src": "/assets/intune.png",
         "alt": "InTune Auto"
       },
+      "art": "/assets/art/intune-auto.jpg",
+      "tint": "#1c1957",
       "description": [
         "Reduced data retrieval latency by 80% by redesigning pagination and query architecture",
         "Innovated custom scheduling platform to improve enterprise booking efficiency with advanced availability logic",
@@ -89,6 +99,8 @@
         "src": "/assets/solutions16.png",
         "alt": "Solutions16"
       },
+      "art": "/assets/art/solutions16.jpg",
+      "tint": "#135d5b",
       "description": [
         "Constructed firmware architecture enabling rapid microcontroller onboarding, reducing deployment time by 30%",
         "Orchestrated reliability improvements with fallback data buffering to ensure resilience during network disruptions",
