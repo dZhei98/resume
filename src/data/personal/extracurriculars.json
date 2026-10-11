@@ -12,8 +12,7 @@
         "src": "/assets/carnegie_mellon_university.jpg",
         "alt": "Carnegie Mellon University"
       },
-      "art": "/assets/art/carnegie-mellon-university-fun-squad.jpg",
-      "tint": "#572519"
+      "tint": "#5c1018"
     },
     {
       "organization": "Carnegie Mellon University, Board Games Club",
@@ -25,8 +24,7 @@
         "src": "/assets/carnegie_mellon_university.jpg",
         "alt": "Carnegie Mellon University"
       },
-      "art": "/assets/art/carnegie-mellon-university-board-games-club.jpg",
-      "tint": "#195748"
+      "tint": "#3b3f45"
     },
     {
       "organization": "National University of Singapore, n-House Subcommittee",
@@ -39,8 +37,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/national-university-of-singapore-n-house-subcommittee.jpg",
-      "tint": "#602c10"
+      "tint": "#6a3a0a"
     },
     {
       "organization": "National University of Singapore, Orientation Group Leader",
@@ -52,8 +49,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/national-university-of-singapore-orientation-group-leader.jpg",
-      "tint": "#603610"
+      "tint": "#0b3363"
     },
     {
       "organization": "National University of Singapore, Orientation Organiser",
@@ -65,8 +61,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/national-university-of-singapore-orientation-organiser.jpg",
-      "tint": "#604010"
+      "tint": "#5e340c"
     },
     {
       "organization": "Raffles Institution, Peer Support Leader",
@@ -78,8 +73,7 @@
         "src": "/assets/raffles_institution.png",
         "alt": "Raffles Institution"
       },
-      "art": "/assets/art/raffles-institution-peer-support-leader.jpg",
-      "tint": "#15562b"
+      "tint": "#14472b"
     }
   ]
 }

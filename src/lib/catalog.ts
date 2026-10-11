@@ -143,8 +143,7 @@ const INTERACTIVE: readonly RawInteractive[] = [
     synopsis: "My background, told the way a shell would tell it: whoami, whereis, and cat.",
     href: "/terminal",
     image: { src: "/assets/terminal.png", alt: "Terminal" },
-    art: "/assets/art/terminal.jpg",
-    tint: "#145c2d",
+    tint: "#253241",
   },
   {
     slug: "qr-code",
@@ -153,8 +152,7 @@ const INTERACTIVE: readonly RawInteractive[] = [
     synopsis: "Scan-ready résumé and LinkedIn QR codes for career fairs and coffee chats.",
     href: "/qr",
     image: { src: "/assets/qr_code.png", alt: "QR code" },
-    art: "/assets/art/qr-code.jpg",
-    tint: "#5f1116",
+    tint: "#2b2b2b",
   },
 ];
 
@@ -341,6 +339,7 @@ drafts.push({
     subtitle: entry.emoji,
     synopsis: "",
     episodes: numberedEpisodes(entry.label === "Languages" ? "Language" : "Interest", entry.items),
+    emoji: entry.emoji,
     art: entry.art,
     tint: entry.tint,
   });

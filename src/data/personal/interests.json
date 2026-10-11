@@ -9,8 +9,7 @@
         "Artificial Intelligence",
         "Virtual Reality"
       ],
-      "art": "/assets/art/passions.jpg",
-      "tint": "#271957"
+      "tint": "#4a3420"
     },
     {
       "label": "Off-hours",
@@ -19,8 +18,7 @@
         "Board Games",
         "Travelling"
       ],
-      "art": "/assets/art/off-hours.jpg",
-      "tint": "#12485f"
+      "tint": "#5e1a1f"
     },
     {
       "label": "Languages",
@@ -29,8 +27,7 @@
         "English (spoken and written)",
         "Chinese (spoken and written)"
       ],
-      "art": "/assets/art/languages.jpg",
-      "tint": "#604710"
+      "tint": "#263f5c"
     }
   ]
 }

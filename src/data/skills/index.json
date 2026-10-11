@@ -9,8 +9,7 @@
         "src": "/assets/programming.png",
         "alt": "Programming languages"
       },
-      "art": "/assets/art/programming-languages.jpg",
-      "tint": "#604610"
+      "tint": "#1f3f5e"
     },
     {
       "name": "Frontend Frameworks",
@@ -20,8 +19,7 @@
         "src": "/assets/frontend.png",
         "alt": "Frontend frameworks"
       },
-      "art": "/assets/art/frontend-frameworks.jpg",
-      "tint": "#184558"
+      "tint": "#0f4a5a"
     },
     {
       "name": "Backend Systems",
@@ -31,8 +29,7 @@
         "src": "/assets/backend.png",
         "alt": "Backend systems"
       },
-      "art": "/assets/art/backend-systems.jpg",
-      "tint": "#192e57"
+      "tint": "#303338"
     },
     {
       "name": "DevOps & Observability",
@@ -42,8 +39,7 @@
         "src": "/assets/devops.png",
         "alt": "DevOps and observability"
       },
-      "art": "/assets/art/devops-and-observability.jpg",
-      "tint": "#145c48"
+      "tint": "#0b3a6b"
     },
     {
       "name": "Data Platforms",
@@ -53,8 +49,7 @@
         "src": "/assets/database.png",
         "alt": "Data platforms"
       },
-      "art": "/assets/art/data-platforms.jpg",
-      "tint": "#3d1957"
+      "tint": "#1b3352"
     },
     {
       "name": "Realtime & Messaging",
@@ -64,8 +59,7 @@
         "src": "/assets/communications.png",
         "alt": "Communications"
       },
-      "art": "/assets/art/realtime-and-messaging.jpg",
-      "tint": "#602d10"
+      "tint": "#1d2a4f"
     },
     {
       "name": "Machine Learning",
@@ -75,8 +69,7 @@
         "src": "/assets/ml.png",
         "alt": "Machine learning"
       },
-      "art": "/assets/art/machine-learning.jpg",
-      "tint": "#571957"
+      "tint": "#3a1f5c"
     },
     {
       "name": "Developer Tools",
@@ -86,8 +79,7 @@
         "src": "/assets/devtools.png",
         "alt": "Developer tools"
       },
-      "art": "/assets/art/developer-tools.jpg",
-      "tint": "#571f19"
+      "tint": "#6b2e1c"
     }
   ]
 }

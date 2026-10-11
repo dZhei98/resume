@@ -65,6 +65,7 @@ export interface Title {
   readonly synopsis: string;
   readonly episodes: readonly Episode[];
   readonly image?: TitleImage;
+  readonly emoji?: string;
   readonly art?: string;
   readonly tint: string;
   readonly links: readonly TitleLink[];

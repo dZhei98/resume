@@ -40,10 +40,16 @@ const TitleArt: React.FC<TitleArtProps> = ({
           priority={priority}
           className="object-cover"
         />
-      ) : logo ? (
+      ) : logo || title.emoji ? (
         <div className="absolute inset-x-0 top-0 flex h-[68%] items-center justify-center">
-          <div className="relative aspect-square h-[62%] max-h-[7.5rem] rounded-md bg-white shadow-lg">
-            <Image src={logo.src} alt={logo.alt} fill sizes="120px" className="object-contain p-[12%]" />
+          <div className="relative flex aspect-square h-[62%] max-h-[7.5rem] items-center justify-center rounded-md bg-white shadow-lg [container-type:size] lg:max-h-[11rem]">
+            {logo ? (
+              <Image src={logo.src} alt={logo.alt} fill sizes="(min-width: 1024px) 176px, 120px" className="object-contain p-[12%]" />
+            ) : (
+              <span aria-hidden className="text-[60cqh] leading-none">
+                {title.emoji}
+              </span>
+            )}
           </div>
         </div>
       ) : null}

@@ -10,8 +10,7 @@
         "src": "/assets/a_new_agent.jpg",
         "alt": "A New Agent Hackathon"
       },
-      "art": "/assets/art/a-new-agent.jpg",
-      "tint": "#193657",
+      "tint": "#2a333d",
       "description": [
         "Won Vapi Track (200+ builders) for a tool-using LLM scheduling agent with multimodal (text + voice) dialogue",
         "Integrated ClinicalTrials.gov-grounded dialogues with Google Calendar and Supabase Edge for intelligent timetabling"
@@ -32,8 +31,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/computer-engineering-capstone-project.jpg",
-      "tint": "#381957",
+      "tint": "#6a3a0a",
       "description": [
         "Built real-time gesture recognition system using multi-layer perceptron in TensorFlow, achieving >95% accuracy",
         "Devised feature extraction pipeline using statistical and spectral metrics optimized with SHAP analysis",
@@ -55,8 +53,7 @@
         "src": "/assets/ethglobal.png",
         "alt": "ETHGlobal"
       },
-      "art": "/assets/art/ethglobal-bangkok.jpg",
-      "tint": "#57194a",
+      "tint": "#4b2061",
       "description": [
         "Secured runner-up in the Real-World Impact: Best Social Good Application track on Polygon, competing against 2,750+ developers, with DocuEarn, a privacy-focused dApp enabling passive income from health data using zero-knowledge proofs.",
         "Implemented Web3Auth for user-friendly access to blockchain features, a seamless frontend using TypeScript, React, and Vite, and integrated Privado ID for cryptographic credentials, along with Sign Protocol for ensuring data authenticity."
@@ -77,8 +74,7 @@
         "src": "/assets/ethglobal.png",
         "alt": "ETHGlobal"
       },
-      "art": "/assets/art/ethglobal-singapore.jpg",
-      "tint": "#193057",
+      "tint": "#183d66",
       "description": [
         "Won 3rd place among 309 projects in Worldcoin's Best Use of World ID track at ETHGlobal Singapore by developing ZkScholar, a decentralized app for private financial aid applications using zk-SNARKs, collaborating in a team of three.",
         "Built the frontend with Next.js and TypeScript, integrated World ID for secure authentication, deployed smart contracts on Ethereum Sepolia using Hardhat and Infura, utilised ethers.js and Protokit for blockchain interaction and data management."
@@ -99,8 +95,7 @@
         "src": "/assets/quantedge.png",
         "alt": "QuantEdge"
       },
-      "art": "/assets/art/quantedge-summer-insights-program.jpg",
-      "tint": "#64470c",
+      "tint": "#0f4a5c",
       "description": [
         "Learned financial management, investment strategies, and asset allocation from senior management and analysts.",
         "Extended externship to complete a technical project in portfolio management."
@@ -116,8 +111,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/fpga-design-project.jpg",
-      "tint": "#571946",
+      "tint": "#0b3363",
       "description": [
         "Collaborated as a team of four on an FPGA project using the Basys3 board.",
         "Developed animated menus and transitions for a Whac-A-Mole game in Verilog using Vivado.",
@@ -143,8 +137,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/rtos-based-robotic-car.jpg",
-      "tint": "#643b0c",
+      "tint": "#6a3a0a",
       "description": [
         "Achieved top 5 fastest times among 27 teams in the final race.",
         "Developed an RTOS-based robotic car using ESP32 and KL25Z boards.",
@@ -166,8 +159,7 @@
         "src": "/assets/pennapps.png",
         "alt": "University of Pennsylvania"
       },
-      "art": "/assets/art/pennapps-xxiv.jpg",
-      "tint": "#221957",
+      "tint": "#2e1652",
       "description": [
         "Won the Best Education Hack award at PennApps XXIV, ranking among the top 8 teams out of 354 participants.",
         "Developed a zk-SNARKs-based solution to streamline student aid applications.",
@@ -189,8 +181,7 @@
         "src": "/assets/hawkhack.png",
         "alt": "HawkHack"
       },
-      "art": "/assets/art/hawkhack-2023.jpg",
-      "tint": "#114c5f",
+      "tint": "#5a1414",
       "description": [
         "Won 1st Place Best Solo Hack at HawkHack 2023 organized by Montclair State University.",
         "Developed customizable travel itineraries using OpenAI models and integrated MapBox for interactive map features."
@@ -211,8 +202,7 @@
         "src": "/assets/study_buddy.jpg",
         "alt": "Study Buddy"
       },
-      "art": "/assets/art/study-buddy.jpg",
-      "tint": "#193d57",
+      "tint": "#1e4766",
       "description": [
         "Led the development and deployment of a Telegram Bot for student study groups using Python and MongoDB on Heroku.",
         "Reached 80 engineering students with 29 active users in a pilot program."
@@ -233,8 +223,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/nus-ideate-2022.jpg",
-      "tint": "#571943",
+      "tint": "#0f2d55",
       "description": [
         "Proposed a 3-pronged approach to empower elderly mental health using assistive technology, real-time monitoring, and virtual connections.",
         "Prototyped an AR-based smart glasses application using Nreal Light for alerts and guidance."
@@ -255,8 +244,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/orbital-apollo-11-advanced.jpg",
-      "tint": "#193357",
+      "tint": "#5e340c",
       "description": [
         "Developed a single-player precision platformer game in Unity using C#.",
         "Created original sprites and art, investing over 400 hours in design and gameplay development."
@@ -277,8 +265,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/summer-bootcamp-on-future-interfaces-with-smart-glasses.jpg",
-      "tint": "#194057",
+      "tint": "#133a6b",
       "description": [
         "Developed an Android app for Nreal Light AR glasses using Unity and Microsoft Mixed Reality Toolkit.",
         "Enabled navigation assistance in shopping malls through location triggers and user tracking."
@@ -299,8 +286,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/alex-to-the-rescue.jpg",
-      "tint": "#125e3a",
+      "tint": "#6d400d",
       "description": [
         "Built a tele-operated search and rescue robot using Arduino, Raspberry Pi, and LIDAR.",
         "Implemented Hector SLAM, bare-metal programming, and TLS-secured communication."
@@ -321,8 +307,7 @@
         "src": "/assets/singapore_blockchain_innovation_challenge.png",
         "alt": "Singapore Blockchain Innovation Challenge"
       },
-      "art": "/assets/art/singapore-blockchain-innovation-challenge-2021.jpg",
-      "tint": "#11553c",
+      "tint": "#24205a",
       "description": [
         "Won 3rd Place in the Enthusiast Track.",
         "Developed a web app for instant insurance payouts by linking health and insurance blockchains using the Affinidi platform.",
@@ -344,8 +329,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/a-maze-ing-race-project.jpg",
-      "tint": "#365818",
+      "tint": "#0b3363",
       "description": [
         "Built a maze-navigating mBot equipped with color detection and audio capabilities.",
         "Integrated IR proximity, color, and ultrasonic sensors with Arduino-based control systems."

@@ -13,8 +13,7 @@
         "src": "/assets/national_university_of_singapore.jpg",
         "alt": "National University of Singapore"
       },
-      "art": "/assets/art/teachsg.jpg",
-      "tint": "#611a23"
+      "tint": "#133a6b"
     },
     {
       "role": "Student Volunteer",
@@ -29,8 +28,7 @@
         "src": "/assets/raffles_institution.png",
         "alt": "Raffles Institution"
       },
-      "art": "/assets/art/lee-kong-chian-gardens-school.jpg",
-      "tint": "#19573a"
+      "tint": "#5a4710"
     }
   ]
 }
