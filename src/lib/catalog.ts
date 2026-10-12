@@ -222,7 +222,7 @@ drafts.push({
   kind: "about",
   name: "Joshua Nee",
   subtitle: aboutData.description[0],
-  synopsis: aboutData.description.slice(1, 3).join(" "),
+  synopsis: aboutData.description[1] ?? "",
   episodes: numberedEpisodes("Chapter", aboutData.description),
   image: { src: "/assets/profile_photo.png", alt: "Joshua Nee", fit: "cover" },
   links: [

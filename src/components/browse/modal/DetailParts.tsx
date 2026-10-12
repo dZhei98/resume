@@ -17,11 +17,7 @@ export const FOCUS_RING =
 const isExternalUrl = (url: string) => /^https?:\/\//.test(url);
 
 export const getDisplaySynopsis = (title: Title): string | null =>
-  title.synopsis &&
-  !title.episodes
-    .map((episode) => episode.text)
-    .join(" ")
-    .includes(title.synopsis)
+  title.synopsis && !title.episodes.some((episode) => episode.text === title.synopsis)
     ? title.synopsis
     : null;
 
