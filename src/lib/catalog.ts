@@ -165,23 +165,27 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
+const PLACEMENTS = [
+  { label: "1st Place", pattern: /\b(1st|first) place\b|\bplaced (1st|first)\b/i },
+  { label: "2nd Place", pattern: /\b(2nd|second) place\b|\bplaced (2nd|second)\b/i },
+  { label: "3rd Place", pattern: /\b(3rd|third) place\b|\bplaced (3rd|third)\b/i },
+  { label: "4th Place", pattern: /\b(4th|fourth) place\b|\bplaced (4th|fourth)\b/i },
+  { label: "5th Place", pattern: /\b(5th|fifth) place\b|\bplaced (5th|fifth)\b/i },
+];
+
 const parseAward = (text: string): Award | undefined => {
   const fieldMatch = text.match(/([\d,]+)\+?\s+(?:developers|participants|builders|projects|teams)/i);
   const field = fieldMatch ? Number(fieldMatch[1].replace(/,/g, "")) : undefined;
 
-  if (/\b(1st|first) place\b/i.test(text)) {
-    return { label: "1st Place", placement: 1, field };
+  const placementIndex = PLACEMENTS.findIndex(({ pattern }) => pattern.test(text));
+  if (placementIndex !== -1) {
+    return { label: PLACEMENTS[placementIndex].label, placement: placementIndex + 1, field };
   }
-  if (/runner-up|\b(2nd|second) place\b/i.test(text)) {
-    return { label: "2nd Place", placement: 2, field };
-  }
-  if (/\b(3rd|third) place\b/i.test(text)) {
+  if (/\b(2nd|second) runner-up\b/i.test(text)) {
     return { label: "3rd Place", placement: 3, field };
   }
-  const placedMatch = text.match(/\bplaced (\d+)(?:st|nd|rd|th)\b|\b(\d+)th place\b/i);
-  if (placedMatch) {
-    const placement = Number(placedMatch[1] ?? placedMatch[2]);
-    return { label: `${placement}th Place`, placement, field };
+  if (/\brunner-up\b/i.test(text)) {
+    return { label: "2nd Place", placement: 2, field };
   }
   if (/\bwon\b|\baward\b/i.test(text)) {
     return { label: "Award Winner", placement: 1.5, field };
