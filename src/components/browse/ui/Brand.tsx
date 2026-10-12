@@ -34,7 +34,7 @@ export const Monogram: React.FC<{ className?: string }> = ({ className = "" }) =
     aria-label="Joshua Nee"
     className={`inline-block font-display leading-none text-netflix-red drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] ${className}`}
   >
-    J
+    JN
   </span>
 );
 

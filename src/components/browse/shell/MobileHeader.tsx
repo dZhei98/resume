@@ -7,7 +7,7 @@ import { getProfile } from "@/constants/profiles";
 import type { CategoryId, ProfileId } from "@/types";
 import Link from "next/link";
 import React from "react";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoSearchOutline } from "react-icons/io5";
 
 type MobileHeaderProps = {
   profileId: ProfileId;
@@ -41,13 +41,22 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
           <Monogram className="text-4xl" />
           <span className="truncate text-lg font-bold text-white">For {profile.name}s</span>
         </Link>
-        <Link
-          href="/"
-          aria-label="Switch profiles"
-          className={`shrink-0 rounded ${FOCUS_RING}`}
-        >
-          <ProfileAvatar profile={profile} size={28} />
-        </Link>
+        <div className="flex shrink-0 items-center gap-3">
+          <Link
+            href={`${base}/search`}
+            aria-label="Search"
+            className={`flex h-9 w-9 shrink-0 items-center justify-center rounded text-white ${FOCUS_RING}`}
+          >
+            <IoSearchOutline aria-hidden className="h-6 w-6" />
+          </Link>
+          <Link
+            href="/"
+            aria-label="Switch profiles"
+            className={`shrink-0 rounded ${FOCUS_RING}`}
+          >
+            <ProfileAvatar profile={profile} size={28} />
+          </Link>
+        </div>
       </div>
 
       <nav
