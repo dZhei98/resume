@@ -5,10 +5,17 @@ import { FOCUS_RING } from "@/components/browse/shell/styles";
 import { useMenu } from "@/components/browse/shell/useMenu";
 import { ProfileAvatar } from "@/components/browse/ui/Brand";
 import { getProfile, PROFILES, RESUME_HREF } from "@/constants/profiles";
+import { getGitHubUrl, getLinkedInUrl } from "@/lib/links";
 import type { ProfileId } from "@/types";
 import Link from "next/link";
 import React from "react";
-import { IoCaretDown, IoDocumentTextOutline, IoSwapHorizontal } from "react-icons/io5";
+import {
+  IoCaretDown,
+  IoDocumentTextOutline,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoSwapHorizontal,
+} from "react-icons/io5";
 
 const ITEM_CLASSES = `flex items-center gap-2.5 rounded-sm px-3 py-1.5 text-[13px] text-white hover:underline ${FOCUS_RING}`;
 
@@ -65,6 +72,34 @@ const ProfileMenu: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
                 <IoDocumentTextOutline aria-hidden className="h-5 w-5 text-netflix-muted" />
               </span>
               <span>Résumé</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={getLinkedInUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={close}
+              className={ITEM_CLASSES}
+            >
+              <span className="flex h-8 w-8 items-center justify-center">
+                <IoLogoLinkedin aria-hidden className="h-5 w-5 text-netflix-muted" />
+              </span>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={getGitHubUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={close}
+              className={ITEM_CLASSES}
+            >
+              <span className="flex h-8 w-8 items-center justify-center">
+                <IoLogoGithub aria-hidden className="h-5 w-5 text-netflix-muted" />
+              </span>
+              <span>GitHub</span>
             </a>
           </li>
         </ul>
