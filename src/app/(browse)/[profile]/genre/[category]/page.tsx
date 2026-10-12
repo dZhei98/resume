@@ -16,7 +16,13 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { category } = await params;
-  return isCategoryId(category) ? { title: getCategory(category).label } : {};
+  if (!isCategoryId(category)) {
+    return {};
+  }
+  return {
+    title: getCategory(category).label,
+    alternates: { canonical: `/recruiter/genre/${category}` },
+  };
 }
 
 export default async function CategoryPage({ params }: PageProps) {

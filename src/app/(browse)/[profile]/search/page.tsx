@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Search",
+  robots: { index: false, follow: true },
 };
 
 export default async function SearchPage({ params }: { params: Promise<{ profile: string }> }) {

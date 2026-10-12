@@ -1,5 +1,6 @@
 import BrowseHome from "@/components/browse/home/BrowseHome";
 import { getProfile, isProfileId } from "@/constants/profiles";
+import type { ProfileId } from "@/types";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -7,9 +8,33 @@ type PageProps = {
   params: Promise<{ profile: string }>;
 };
 
+const PROFILE_SEO: Record<ProfileId, { title: string; description: string }> = {
+  recruiter: {
+    title: "Experience & Résumé",
+    description:
+      "Joshua Nee's résumé: backend engineering at DoorDash and Shopee, a Master's in Software Engineering at Carnegie Mellon University, and top hackathon wins.",
+  },
+  developer: {
+    title: "Projects, Hackathons & Skills",
+    description:
+      "Joshua Nee's hackathon wins, engineering projects, and technical skills across Golang, TypeScript, Python, distributed systems, and machine learning.",
+  },
+  stalker: {
+    title: "About, Interests & Activities",
+    description:
+      "The personal side of Joshua Nee: leadership, volunteering, interests, languages, and interactive experiences.",
+  },
+};
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { profile } = await params;
-  return isProfileId(profile) ? { title: getProfile(profile).name } : {};
+  if (!isProfileId(profile)) {
+    return {};
+  }
+  return {
+    ...PROFILE_SEO[profile],
+    alternates: { canonical: getProfile(profile).href },
+  };
 }
 
 export default async function ProfileHomePage({ params }: PageProps) {

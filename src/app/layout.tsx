@@ -1,4 +1,5 @@
 import { displayFont, netflixSans } from '@/lib/fonts';
+import { personJsonLd, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from "next";
@@ -12,43 +13,44 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://joshuanee.vercel.app/'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Joshua Nee | Software Engineer",
+    default: SITE_NAME,
     template: "%s | Joshua Nee",
   },
-  description:
-    "Software Engineer portfolio - CMU Master's student in Software Engineering, former Shopee backend engineer. Specializing in backend development, full-stack applications, and enterprise-scale systems.",
+  description: SITE_DESCRIPTION,
   keywords: [
     "Joshua Nee",
     "software engineer",
-    "backend developer",
+    "backend engineer",
     "full stack developer",
-    "CMU",
     "Carnegie Mellon University",
+    "CMU MSE",
+    "National University of Singapore",
+    "DoorDash",
     "Shopee",
+    "hackathon",
     "portfolio",
-    "Next.js",
-    "React",
-    "TypeScript",
     "Golang",
+    "TypeScript",
     "Python",
   ],
-  authors: [{ name: "Joshua Nee" }],
+  authors: [{ name: "Joshua Nee", url: SITE_URL }],
   creator: "Joshua Nee",
   openGraph: {
-    type: "website",
+    type: "profile",
     locale: "en_US",
-    siteName: "Joshua Nee | Software Engineer",
-    title: "Joshua Nee | Software Engineer",
-    description:
-      "CMU Master's student & former Shopee backend engineer. Explore my projects, experience, and technical skills.",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    firstName: "Joshua",
+    lastName: "Nee",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Joshua Nee | Software Engineer",
-    description:
-      "CMU Master's student & former Shopee backend engineer. Explore my projects, experience, and technical skills.",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    creator: "@dZhei98",
   },
   robots: {
     index: true,
@@ -73,6 +75,10 @@ export default function RootLayout({
       <body
         className={`${netflixSans.variable} ${displayFont.variable} antialiased bg-[#141414] text-neutral-100`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()).replace(/</g, "\\u003c") }}
+        />
         {children}
         <Analytics />
         <SpeedInsights />
