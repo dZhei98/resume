@@ -27,7 +27,7 @@ const NotificationsMenu: React.FC = () => {
   const count = notifications.length;
 
   return (
-    <div {...rootProps} className="relative">
+    <div {...rootProps} className="md:relative">
       <button
         {...triggerProps}
         aria-label={count ? `Notifications, ${count} new` : "Notifications"}
@@ -44,7 +44,11 @@ const NotificationsMenu: React.FC = () => {
         )}
       </button>
 
-      <Dropdown open={open} className="right-0 w-[22rem]" caretClassName="right-[11px]">
+      <Dropdown
+        open={open}
+        className="inset-x-4 md:inset-x-auto md:right-0 md:w-[22rem]"
+        caretClassName="right-[51px] md:right-[11px]"
+      >
         {count ? (
           <ul className="max-h-[min(70vh,30rem)] overflow-y-auto">
             {notifications.map(({ title, label }) => (

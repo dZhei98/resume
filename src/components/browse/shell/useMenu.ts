@@ -37,9 +37,24 @@ export const useMenu = () => {
     }
 
     const onPointerDown = (event: PointerEvent) => {
-      if (!rootRef.current?.contains(event.target as Node)) {
-        setOpen(false);
+      if (rootRef.current?.contains(event.target as Node)) {
+        return;
       }
+      setOpen(false);
+      if (event.pointerType === "mouse") {
+        return;
+      }
+      const swallowClick = (click: MouseEvent) => {
+        click.preventDefault();
+        click.stopPropagation();
+        release();
+      };
+      const release = () => {
+        document.removeEventListener("click", swallowClick, true);
+        document.removeEventListener("pointerdown", release, true);
+      };
+      document.addEventListener("click", swallowClick, true);
+      document.addEventListener("pointerdown", release, true);
     };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {

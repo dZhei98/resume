@@ -19,7 +19,10 @@ import {
 
 const ITEM_CLASSES = `flex items-center gap-2.5 rounded-sm px-3 py-1.5 text-[13px] text-white hover:underline ${FOCUS_RING}`;
 
-const ProfileMenu: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
+const ProfileMenu: React.FC<{ profileId: ProfileId; compact?: boolean }> = ({
+  profileId,
+  compact = false,
+}) => {
   const profile = getProfile(profileId);
   const others = PROFILES.filter((candidate) => candidate.id !== profileId);
   const { open, close, rootProps, triggerProps } = useMenu();
@@ -31,16 +34,22 @@ const ProfileMenu: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
         aria-label={`Account menu, ${profile.name}`}
         className={`flex items-center gap-2.5 rounded ${FOCUS_RING}`}
       >
-        <ProfileAvatar profile={profile} size={32} />
-        <IoCaretDown
-          aria-hidden
-          className={`h-3.5 w-3.5 text-white transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
-        />
+        <ProfileAvatar profile={profile} size={compact ? 28 : 32} />
+        {!compact && (
+          <IoCaretDown
+            aria-hidden
+            className={`h-3.5 w-3.5 text-white transition-transform duration-300 ${
+              open ? "rotate-180" : ""
+            }`}
+          />
+        )}
       </button>
 
-      <Dropdown open={open} className="right-0 w-56" caretClassName="right-[33px]">
+      <Dropdown
+        open={open}
+        className="right-0 w-56"
+        caretClassName={compact ? "right-[7px]" : "right-[33px]"}
+      >
         <ul className="space-y-1 px-1 py-2.5">
           {others.map((other) => (
             <li key={other.id}>

@@ -1,7 +1,9 @@
 "use client";
 
+import NotificationsMenu from "@/components/browse/shell/NotificationsMenu";
+import ProfileMenu from "@/components/browse/shell/ProfileMenu";
 import { FOCUS_RING } from "@/components/browse/shell/styles";
-import { Monogram, ProfileAvatar } from "@/components/browse/ui/Brand";
+import { Monogram } from "@/components/browse/ui/Brand";
 import { CATEGORIES, getCategory } from "@/constants/categories";
 import { getProfile } from "@/constants/profiles";
 import type { CategoryId, ProfileId } from "@/types";
@@ -49,13 +51,8 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
           >
             <IoSearchOutline aria-hidden className="h-6 w-6" />
           </Link>
-          <Link
-            href="/"
-            aria-label="Switch profiles"
-            className={`shrink-0 rounded ${FOCUS_RING}`}
-          >
-            <ProfileAvatar profile={profile} size={28} />
-          </Link>
+          <NotificationsMenu />
+          <ProfileMenu profileId={profileId} compact />
         </div>
       </div>
 
