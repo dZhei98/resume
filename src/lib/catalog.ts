@@ -98,6 +98,8 @@ interface RawInteractive extends PresentationFields {
 
 export const ABOUT_SLUG = "joshua-nee";
 
+export const TOP_HACKATHON_COUNT = 8;
+
 const DEFAULT_TINT: Record<TitleKind, string> = {
   about: "#2b3446",
   work: "#4a1f1f",
@@ -175,6 +177,11 @@ const parseAward = (text: string): Award | undefined => {
   }
   if (/\b(3rd|third) place\b/i.test(text)) {
     return { label: "3rd Place", placement: 3, field };
+  }
+  const placedMatch = text.match(/\bplaced (\d+)(?:st|nd|rd|th)\b|\b(\d+)th place\b/i);
+  if (placedMatch) {
+    const placement = Number(placedMatch[1] ?? placedMatch[2]);
+    return { label: `${placement}th Place`, placement, field };
   }
   if (/\bwon\b|\baward\b/i.test(text)) {
     return { label: "Award Winner", placement: 1.5, field };
@@ -384,7 +391,7 @@ const buildCatalog = (): Title[] => {
 
   return titles.map((title) => {
     const rank = ranked.indexOf(title);
-    return rank === -1 || rank >= 5 ? title : { ...title, rank: rank + 1 };
+    return rank === -1 || rank >= TOP_HACKATHON_COUNT ? title : { ...title, rank: rank + 1 };
   });
 };
 

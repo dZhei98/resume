@@ -30,17 +30,18 @@ const volunteering = getTitlesByKind("volunteering");
 const interests = getTitlesByKind("interest");
 const interactive = getTitlesByKind("interactive");
 const topHackathons = getTopHackathons();
+const topHackathonsTitle = `Top ${topHackathons.length} Hackathon Wins`;
 
 const PROFILE_ROWS: Record<ProfileId, readonly RowSpec[]> = {
   recruiter: [
     row("experience", "Experience Spotlight", work),
     row("education", "Academic Journey", education),
-    row("top-hackathons", "Top 5 Hackathon Wins", topHackathons, "ranked"),
+    row("top-hackathons", topHackathonsTitle, topHackathons, "ranked"),
     row("projects", "Flagship Projects", projects),
     row("skills", "Technical Skills", toolkit),
   ],
   developer: [
-    row("top-hackathons", "Top 5 Hackathon Wins", topHackathons, "ranked"),
+    row("top-hackathons", topHackathonsTitle, topHackathons, "ranked"),
     row("hackathons", "Hackathon Highlights", hackathons),
     row("projects", "Featured Projects", projects),
     row("experience", "Experience Spotlight", work),
@@ -67,7 +68,7 @@ export const getCategoryRows = (
     return {
       heroSlug: topHackathons[0]?.slug ?? ABOUT_SLUG,
       rows: [
-        row("top-hackathons", `Top ${topHackathons.length} Hackathon Wins`, topHackathons, "ranked"),
+        row("top-hackathons", topHackathonsTitle, topHackathons, "ranked"),
         row("hackathons", "All Hackathons", hackathons),
         row("projects", "All Projects", projects),
       ],

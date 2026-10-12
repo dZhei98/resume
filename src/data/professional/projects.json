@@ -2,6 +2,28 @@
   "title": "Projects & Hackathons",
   "content": [
     {
+      "title": "NewsBreak x CMU Hackathon",
+      "domain": "AI Agents",
+      "type": "Hackathon",
+      "dateRange": "Sep 2026 – Sep 2026",
+      "image": {
+        "src": "/assets/newsbreak.png",
+        "alt": "NewsBreak"
+      },
+      "tint": "#5e1418",
+      "description": [
+        "Placed 5th among approximately 60–70 participants at the NewsBreak x CMU Hackathon",
+        "Built GoodTime, an AI-powered Telegram assistant that turns local news and user preferences into personalized group activity plans",
+        "Implemented an end-to-end Python and Telegram Bot API prototype featuring constraint-based recommendations, group voting, calendar invitations, route links, and adaptive weather and event updates"
+      ],
+      "links": [
+        {
+          "label": "GoodTime Repository",
+          "url": "https://github.com/NatalieeeeeYan/goodtime-newsbreak"
+        }
+      ]
+    },
+    {
       "title": "A New Agent",
       "domain": "LLM Agents",
       "type": "Hackathon",
@@ -339,6 +361,23 @@
           "label": "Project Report",
           "url": "https://docs.google.com/document/d/1zo9rXw2VmctTetDp_5IcVHNmSQ8xb3mBoOgAy_DLc7M/edit"
         }
+      ]
+    },
+    {
+      "title": "NUS Space Out Hackathon",
+      "domain": "Space Exploration",
+      "type": "Hackathon",
+      "dateRange": "Jul 2021 – Jul 2021",
+      "image": {
+        "src": "/assets/nus_seds.png",
+        "alt": "NUS Students for the Exploration and Development of Space"
+      },
+      "tint": "#123a7a",
+      "description": [
+        "Won 3rd Place in Mini Hackathon",
+        "Collaborated in a team of four to compete",
+        "Brainstormed potential issues and solutions to living in space",
+        "Formulated potential space rover designs and experimental tasks to be conducted in space"
       ]
     }
   ]

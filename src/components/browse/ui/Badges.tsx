@@ -1,3 +1,4 @@
+import { TOP_HACKATHON_COUNT } from "@/lib/catalog";
 import React from "react";
 
 export const LabelTag: React.FC<{ label: string; className?: string }> = ({
@@ -13,10 +14,10 @@ export const LabelTag: React.FC<{ label: string; className?: string }> = ({
 
 export const TopBadge: React.FC<{ className?: string }> = ({ className = "" }) => (
   <span
-    aria-label="Top 5"
+    aria-label={`Top ${TOP_HACKATHON_COUNT}`}
     className={`inline-flex h-7 w-6 shrink-0 flex-col items-center justify-center rounded-[2px] bg-netflix-red leading-none text-white ${className}`}
   >
     <span className="text-[7px] font-bold tracking-tight">TOP</span>
-    <span className="text-[11px] font-extrabold">5</span>
+    <span className="text-[11px] font-extrabold">{TOP_HACKATHON_COUNT}</span>
   </span>
 );
