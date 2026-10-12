@@ -75,11 +75,9 @@ const ModalShell: React.FC<ModalShellProps> = ({ title, isDesktop, onClose }) =>
     const root = document.documentElement;
     const overflow = root.style.overflow;
     root.style.overflow = "hidden";
-    root.dataset.titleModal = "";
 
     return () => {
       root.style.overflow = overflow;
-      delete root.dataset.titleModal;
       if (previous?.isConnected) {
         previous.focus({ preventScroll: true });
       }
