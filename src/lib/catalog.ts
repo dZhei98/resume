@@ -98,7 +98,7 @@ interface RawInteractive extends PresentationFields {
 
 export const ABOUT_SLUG = "joshua-nee";
 
-export const TOP_HACKATHON_COUNT = 8;
+export const TOP_HACKATHON_COUNT = 5;
 
 const DEFAULT_TINT: Record<TitleKind, string> = {
   about: "#2b3446",

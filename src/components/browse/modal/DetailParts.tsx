@@ -1,11 +1,9 @@
 "use client";
 
-import { TopBadge, LabelTag } from "@/components/browse/ui/Badges";
+import { TopBadge } from "@/components/browse/ui/Badges";
 import { NfButton } from "@/components/browse/ui/Buttons";
 import TitleArt from "@/components/browse/ui/TitleArt";
 import { RESUME_HREF } from "@/constants/profiles";
-import { useNow } from "@/hooks/useNow";
-import { getTitleLabels } from "@/lib/labels";
 import { getLinkedInUrl } from "@/lib/links";
 import type { Episode, Skill, Title, TitleLink } from "@/types";
 import { motion, useReducedMotion } from "framer-motion";
@@ -133,26 +131,18 @@ export const TitleBadges: React.FC<{ title: Title; rankClassName: string }> = ({
   title,
   rankClassName,
 }) => {
-  const now = useNow();
-  const labels = getTitleLabels(title, now).slice(1);
-
-  if (!labels.length && !title.rank) {
+  if (!title.rank) {
     return null;
   }
 
   return (
     <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-      {labels.map((label) => (
-        <LabelTag key={label} label={label} />
-      ))}
-      {title.rank ? (
-        <span className="inline-flex items-center gap-2">
-          <TopBadge />
-          <span className={`text-white ${rankClassName}`}>
-            #{title.rank} in Hackathons Today
-          </span>
+      <span className="inline-flex items-center gap-2">
+        <TopBadge />
+        <span className={`text-white ${rankClassName}`}>
+          #{title.rank} in Hackathons Today
         </span>
-      ) : null}
+      </span>
     </div>
   );
 };
