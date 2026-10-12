@@ -32,6 +32,15 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/assets/:file(Resume_.*\\.pdf)",
+        headers: [
+          {
+            key: "Cache-Control",
             value: "public, max-age=0, must-revalidate",
           },
         ],
