@@ -33,7 +33,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
     : CATEGORIES;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 md:hidden">
+    <header className="fixed inset-x-0 top-0 z-40 md:hidden [html[data-title-modal]_&]:pointer-events-none">
       <div
         className={`relative z-10 flex h-14 items-center justify-between gap-3 px-4 transition-colors duration-300 ${
           scrolled ? SURFACE : "bg-transparent"
