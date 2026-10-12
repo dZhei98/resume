@@ -33,9 +33,11 @@
         {
           "title": "Core Courses:",
           "description": [
-            "Foundations of Computer Systems (18-613)",
             "Distributed Systems (14-736)",
+            "Cloud Computing (15-319)",
+            "Foundations of Computer Systems (18-613)",
             "Software Testing & Operations (18-654)",
+            "Software Refactoring (18-664)",
             "Introduction to Deep Learning (11-695)"
           ]
         },
