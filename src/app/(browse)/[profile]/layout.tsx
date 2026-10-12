@@ -3,7 +3,7 @@ import TopNav from "@/components/browse/shell/TopNav";
 import TitleModal from "@/components/browse/modal/TitleModal";
 import { isProfileId, PROFILES } from "@/constants/profiles";
 import { notFound } from "next/navigation";
-import React, { Suspense } from "react";
+import React from "react";
 
 export const dynamicParams = false;
 
@@ -28,9 +28,7 @@ export default async function ProfileLayout({
       <TopNav profileId={profile} />
       <main>{children}</main>
       <Footer />
-      <Suspense fallback={null}>
-        <TitleModal profileId={profile} />
-      </Suspense>
+      <TitleModal profileId={profile} />
     </>
   );
 }

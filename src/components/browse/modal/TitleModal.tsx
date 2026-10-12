@@ -3,7 +3,7 @@
 import DesktopDetails from "@/components/browse/modal/DesktopDetails";
 import MobileDetails from "@/components/browse/modal/MobileDetails";
 import { useIsDesktop } from "@/components/browse/modal/useIsDesktop";
-import { useActiveTitleSlug, useCloseTitle } from "@/hooks/useTitleModal";
+import { useActiveTitleSlug, useCloseTitle, useTitlePathSlug } from "@/hooks/useTitleModal";
 import { getTitle } from "@/lib/catalog";
 import type { ProfileId, Title } from "@/types";
 import {
@@ -14,7 +14,7 @@ import {
   useReducedMotion,
   type HTMLMotionProps,
 } from "framer-motion";
-import React, { useCallback, useEffect, useId, useRef } from "react";
+import React, { Suspense, useCallback, useEffect, useId, useRef } from "react";
 
 const FOCUSABLE =
   'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -186,8 +186,7 @@ const ModalShell: React.FC<ModalShellProps> = ({ title, isDesktop, onClose }) =>
   );
 };
 
-const TitleModal: React.FC<{ profileId: ProfileId }> = () => {
-  const slug = useActiveTitleSlug();
+const TitleModalView: React.FC<{ slug: string | null }> = ({ slug }) => {
   const title = slug ? getTitle(slug) : undefined;
   const close = useCloseTitle();
   const isDesktop = useIsDesktop();
@@ -202,6 +201,20 @@ const TitleModal: React.FC<{ profileId: ProfileId }> = () => {
     <AnimatePresence>
       {title && <ModalShell key="title-modal" title={title} isDesktop={isDesktop} onClose={close} />}
     </AnimatePresence>
+  );
+};
+
+const SearchTitleModal: React.FC<{ pathSlug: string | null }> = ({ pathSlug }) => (
+  <TitleModalView slug={useActiveTitleSlug() ?? pathSlug} />
+);
+
+const TitleModal: React.FC<{ profileId: ProfileId }> = () => {
+  const pathSlug = useTitlePathSlug();
+
+  return (
+    <Suspense fallback={pathSlug ? <TitleModalView slug={pathSlug} /> : null}>
+      <SearchTitleModal pathSlug={pathSlug} />
+    </Suspense>
   );
 };
 

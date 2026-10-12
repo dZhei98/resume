@@ -27,3 +27,7 @@ export const personJsonLd = () => ({
   ],
   sameAs: getAllLinks().map((link) => link.url),
 });
+
+export const INDEXED_TITLES = CATALOG.filter((title) => title.kind !== "interactive");
+
+export const titlePath = (slug: string) => `/recruiter/title/${slug}`;

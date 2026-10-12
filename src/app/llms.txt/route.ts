@@ -1,5 +1,5 @@
 import { CATALOG } from "@/lib/catalog";
-import { SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_URL, titlePath } from "@/lib/site";
 import type { Title, TitleKind } from "@/types";
 
 export const dynamic = "force-static";
@@ -21,7 +21,7 @@ const renderTitle = (title: Title): string => {
   const meta = [title.subtitle, title.domain, title.award?.label, title.dateRange]
     .filter((part) => part && part !== title.emoji)
     .join(" · ");
-  const lines = [`### ${title.name}`];
+  const lines = [`### [${title.name}](${SITE_URL}${titlePath(title.slug)})`];
   if (meta) {
     lines.push(meta);
   }

@@ -1,9 +1,11 @@
 "use client";
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useParams, usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
 export const TITLE_PARAM = "title";
+
+const TITLE_PATH = /\/title\/[^/]+$/;
 
 let pushedUrl: string | null = null;
 
@@ -14,7 +16,7 @@ export const useOpenTitle = () => {
   return useCallback(
     (slug: string) => {
       const params = new URLSearchParams(window.location.search);
-      const alreadyOpen = params.has(TITLE_PARAM);
+      const alreadyOpen = params.has(TITLE_PARAM) || TITLE_PATH.test(pathname);
       params.set(TITLE_PARAM, slug);
       const url = `${pathname}?${params.toString()}`;
 
@@ -37,6 +39,11 @@ export const useCloseTitle = () => {
   const pathname = usePathname();
 
   return useCallback(() => {
+    if (TITLE_PATH.test(pathname)) {
+      pushedUrl = null;
+      router.replace(pathname.replace(TITLE_PATH, ""), { scroll: false });
+      return;
+    }
     const current = `${window.location.pathname}${window.location.search}`;
     const wasPushed = pushedUrl === current;
     pushedUrl = null;
@@ -52,3 +59,5 @@ export const useCloseTitle = () => {
 };
 
 export const useActiveTitleSlug = (): string | null => useSearchParams().get(TITLE_PARAM);
+
+export const useTitlePathSlug = (): string | null => useParams<{ slug?: string }>().slug ?? null;
