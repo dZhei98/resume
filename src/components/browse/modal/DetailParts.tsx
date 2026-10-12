@@ -161,13 +161,13 @@ export const LinkAnchor: React.FC<{ link: TitleLink; className?: string }> = ({
   link,
   className = "",
 }) => {
-  const external = isExternalUrl(link.url);
+  const newTab = isExternalUrl(link.url) || link.url.startsWith("/assets/");
 
   return (
     <a
       href={link.url}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noopener noreferrer" : undefined}
+      target={newTab ? "_blank" : undefined}
+      rel={newTab ? "noopener noreferrer" : undefined}
       className={`${FOCUS_RING} ${className}`}
     >
       {link.label}

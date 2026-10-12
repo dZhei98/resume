@@ -53,8 +53,8 @@ export const NfButton: React.FC<NfButtonProps> = ({
     return (
       <a
         href={href}
-        target={isExternal(href) ? "_blank" : undefined}
-        rel={isExternal(href) ? "noopener noreferrer" : undefined}
+        target="_blank"
+        rel="noopener noreferrer"
         className={classes}
         aria-label={ariaLabel}
       >
