@@ -40,7 +40,7 @@ const ProfileGate: React.FC = () => {
       <div
         ref={gateRef}
         aria-hidden={introDone ? undefined : true}
-        className="flex min-h-[100dvh] flex-col bg-netflix-bg"
+        className="flex min-h-dvh flex-col bg-netflix-bg"
       >
         <header className="flex h-16 shrink-0 items-center px-4 md:h-24 md:px-gutter">
           <Wordmark className="text-[1.9rem] md:text-[2.4rem]" />
@@ -62,7 +62,7 @@ const ProfileGate: React.FC = () => {
 
             <motion.ul
               variants={STAGGER}
-              className="mt-8 flex max-w-[15rem] flex-wrap items-start justify-center gap-x-6 gap-y-8 sm:max-w-none md:mt-[2vw] md:flex-nowrap md:gap-[2vw]"
+              className="mt-8 flex max-w-60 flex-wrap items-start justify-center gap-x-6 gap-y-8 sm:max-w-none md:mt-[2vw] md:flex-nowrap md:gap-[2vw]"
             >
               {PROFILES.map((profile) => {
                 const pending = pendingId === profile.id;
@@ -77,9 +77,9 @@ const ProfileGate: React.FC = () => {
                           setPendingId(profile.id);
                         }
                       }}
-                      className="group flex flex-col items-center outline-none"
+                      className="group flex flex-col items-center outline-hidden"
                     >
-                      <span className="relative block h-[6.5rem] w-[6.5rem] rounded outline outline-[3px] outline-transparent transition-[outline-color] duration-150 group-hover:outline-white group-focus-visible:outline-white md:aspect-square md:h-auto md:w-[10vw] md:min-w-[84px] md:max-w-[200px]">
+                      <span className="relative block h-26 w-26 rounded-sm outline-solid outline-[3px] outline-transparent transition-[outline-color] duration-150 group-hover:outline-white group-focus-visible:outline-white md:aspect-square md:h-auto md:w-[10vw] md:min-w-[84px] md:max-w-[200px]">
                         <ProfileAvatar
                           profile={profile}
                           size={200}
@@ -88,7 +88,7 @@ const ProfileGate: React.FC = () => {
                         {pending && (
                           <span
                             role="status"
-                            className="absolute inset-0 flex items-center justify-center rounded bg-black/40"
+                            className="absolute inset-0 flex items-center justify-center rounded-sm bg-black/40"
                           >
                             <span
                               aria-hidden
@@ -101,7 +101,7 @@ const ProfileGate: React.FC = () => {
                       <span className="mt-2 text-base text-netflix-gray transition-colors duration-150 group-hover:text-white group-focus-visible:text-white md:mt-[0.8vw] md:text-[max(1rem,1.3vw)]">
                         {profile.name}
                       </span>
-                      <span className="mt-1 hidden max-w-[11rem] text-center text-xs text-netflix-gray sm:block">
+                      <span className="mt-1 hidden max-w-44 text-center text-xs text-netflix-gray sm:block">
                         {profile.tagline}
                       </span>
                     </Link>

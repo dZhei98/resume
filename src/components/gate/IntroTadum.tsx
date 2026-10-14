@@ -76,7 +76,7 @@ const Ident: React.FC = () => (
             style={{ transform: `scaleY(${(1 + 0.017 * (index - CENTER) ** 2).toFixed(3)})` }}
           >
             <motion.span
-              className="inline-block bg-gradient-to-b from-[#FF1E2D] via-netflix-red to-netflix-red-dark bg-clip-text text-transparent drop-shadow-[0_3px_4px_rgba(0,0,0,0.6)]"
+              className="inline-block bg-linear-to-b from-[#FF1E2D] via-netflix-red to-netflix-red-dark bg-clip-text text-transparent drop-shadow-[0_3px_4px_rgba(0,0,0,0.6)]"
               style={{ originY: 1 }}
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 1, opacity: 1 }}
@@ -143,7 +143,7 @@ const IntroTadum: React.FC<{ onDone: () => void }> = ({ onDone }) => {
   return (
     <motion.div
       aria-hidden
-      className="fixed inset-0 z-[70] flex items-center justify-center overflow-hidden bg-black"
+      className="fixed inset-0 z-70 flex items-center justify-center overflow-hidden bg-black"
       variants={OVERLAY}
       initial="idle"
       animate={phase}

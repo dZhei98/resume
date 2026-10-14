@@ -32,7 +32,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className={`block rounded-sm text-white transition-colors hover:text-netflix-gray ${FOCUS_RING}`}
+            className={`block rounded-xs text-white transition-colors hover:text-netflix-gray ${FOCUS_RING}`}
           >
             <Icon aria-hidden className="h-6 w-6" />
           </a>
@@ -48,12 +48,12 @@ const Footer: React.FC = () => (
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`rounded-sm hover:underline ${FOCUS_RING}`}
+              className={`rounded-xs hover:underline ${FOCUS_RING}`}
             >
               {label}
             </a>
           ) : (
-            <Link href={href} className={`rounded-sm hover:underline ${FOCUS_RING}`}>
+            <Link href={href} className={`rounded-xs hover:underline ${FOCUS_RING}`}>
               {label}
             </Link>
           )}

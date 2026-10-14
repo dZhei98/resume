@@ -24,7 +24,7 @@ const TitleTile: React.FC<{ title: Title; now: Date | null }> = ({ title, now })
           dismiss();
           openTitle(title.slug);
         }}
-        className={`${TILE_BASE} ${TILE_WIDTH} aspect-[2/3] overflow-hidden rounded-md md:aspect-video md:rounded-lg`}
+        className={`${TILE_BASE} ${TILE_WIDTH} aspect-2/3 overflow-hidden rounded-md md:aspect-video md:rounded-lg`}
         {...tileProps}
       >
         <TitleArt

@@ -30,7 +30,7 @@ const PAGE_FRACTION = 0.92;
 const INITIAL_PAGER: Pager = { pages: 1, page: 0, canLeft: false, canRight: false };
 
 const HANDLE_CLASSES =
-  "group/handle absolute bottom-2 top-0 z-20 hidden w-[4%] items-center justify-center bg-black/50 text-white opacity-0 transition-[opacity,background-color] duration-200 hover:bg-black/70 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white group-hover/row:opacity-100 md:flex";
+  "group/handle absolute bottom-2 top-0 z-20 hidden w-gutter items-center justify-center bg-black/50 text-white opacity-0 transition-[opacity,background-color] duration-200 hover:bg-black/70 focus-visible:opacity-100 focus-visible:outline-solid focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white group-hover/row:opacity-100 md:flex";
 
 const CHEVRON_CLASSES =
   "h-[max(1.25rem,2vw)] w-[max(1.25rem,2vw)] transition-transform duration-200 group-hover/handle:scale-125 motion-reduce:transition-none";
@@ -97,7 +97,7 @@ const Row: React.FC<RowProps> = ({ title, kind, titles, now, exploreHref }) => {
         <div className="flex min-w-0 items-baseline gap-3">
           <h2
             id={headingId}
-            className="truncate text-base font-semibold leading-normal text-netflix-light md:text-[length:max(1.05rem,1.4vw)]"
+            className="truncate text-base font-semibold leading-normal text-netflix-light md:text-[max(1.05rem,1.4vw)]"
           >
             {title}
           </h2>
@@ -105,7 +105,7 @@ const Row: React.FC<RowProps> = ({ title, kind, titles, now, exploreHref }) => {
             <Link
               href={exploreHref}
               aria-label={`Explore All ${title}`}
-              className="hidden shrink-0 -translate-x-2 items-center gap-0.5 text-xs font-semibold text-[#54b9c5] opacity-0 transition duration-300 focus-visible:translate-x-0 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white group-hover/row:translate-x-0 group-hover/row:opacity-100 motion-reduce:transition-none md:inline-flex md:text-[length:max(0.75rem,0.9vw)]"
+              className="hidden shrink-0 -translate-x-2 items-center gap-0.5 text-xs font-semibold text-[#54b9c5] opacity-0 transition duration-300 focus-visible:translate-x-0 focus-visible:opacity-100 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white group-hover/row:translate-x-0 group-hover/row:opacity-100 motion-reduce:transition-none md:inline-flex md:text-[max(0.75rem,0.9vw)]"
             >
               Explore All
               <IoChevronForward aria-hidden className="h-[1em] w-[1em]" />
@@ -131,7 +131,7 @@ const Row: React.FC<RowProps> = ({ title, kind, titles, now, exploreHref }) => {
         <div
           ref={trackRef}
           onScroll={measure}
-          className="flex snap-x snap-mandatory scroll-px-4 gap-1.5 overflow-x-auto px-4 pb-2 md:scroll-px-[4%] md:gap-[0.4vw] md:px-gutter"
+          className="flex snap-x snap-mandatory scroll-px-4 gap-1.5 overflow-x-auto px-4 pb-2 md:scroll-px-gutter md:gap-[0.4vw] md:px-gutter"
         >
           {titles.map((item, index) =>
             kind === "ranked" ? (

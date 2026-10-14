@@ -56,6 +56,6 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
     alt={alt}
     width={size}
     height={size}
-    className={`rounded ${className}`}
+    className={`rounded-sm ${className}`}
   />
 );

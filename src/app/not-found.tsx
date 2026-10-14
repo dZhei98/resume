@@ -14,7 +14,7 @@ export default function NotFound() {
         <Link
           href="/"
           aria-label="Joshua Nee home"
-          className="rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="rounded-xs focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           <Wordmark className="text-[1.75rem] md:text-[2.1rem]" />
         </Link>

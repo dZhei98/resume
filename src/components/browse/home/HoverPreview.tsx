@@ -104,7 +104,7 @@ const HoverPreviewCard: React.FC<HoverPreviewCardProps> = ({
       <div className="relative aspect-video">
         <TitleArt
           title={title}
-          nameClassName="text-2xl md:text-[length:max(1.25rem,1.9vw)]"
+          nameClassName="text-2xl md:text-[max(1.25rem,1.9vw)]"
           sizes="(min-width: 1280px) 23vw, (min-width: 1024px) 27vw, 34vw"
         />
       </div>

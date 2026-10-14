@@ -28,7 +28,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         <div className="relative border-t-2 border-white bg-black/90 text-white shadow-2xl">
           <span
             aria-hidden
-            className={`absolute -top-[9px] h-0 w-0 border-x-[7px] border-b-[7px] border-x-transparent border-b-white ${caretClassName}`}
+            className={`absolute top-[-9px] h-0 w-0 border-x-[7px] border-b-[7px] border-x-transparent border-b-white ${caretClassName}`}
           />
           {children}
         </div>

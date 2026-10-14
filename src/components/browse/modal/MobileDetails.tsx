@@ -141,14 +141,14 @@ const MobileDetails: React.FC<MobileDetailsProps> = ({
             id={panelId(activeTab)}
             aria-labelledby={tabId(activeTab)}
             tabIndex={0}
-            className={`rounded pt-4 ${FOCUS_RING}`}
+            className={`rounded-sm pt-4 ${FOCUS_RING}`}
           >
             {activeTab === "episodes" && (
               <ol className="space-y-5">
                 {title.episodes.map((episode, index) => (
                   <li key={index}>
                     <div className="grid grid-cols-[7rem_minmax(0,1fr)] items-center gap-3">
-                      <div className="relative aspect-video overflow-hidden rounded">
+                      <div className="relative aspect-video overflow-hidden rounded-sm">
                         <TitleArt title={title} showName={false} showLogoBadge={false} sizes="112px" />
                       </div>
                       <p className="text-sm font-semibold text-white">
@@ -180,7 +180,7 @@ const MobileDetails: React.FC<MobileDetailsProps> = ({
                       type="button"
                       aria-label={item.name}
                       onClick={() => openTitle(item.slug)}
-                      className={`relative block aspect-[2/3] w-full overflow-hidden rounded-md ${FOCUS_RING}`}
+                      className={`relative block aspect-2/3 w-full overflow-hidden rounded-md ${FOCUS_RING}`}
                     >
                       <TitleArt title={item} nameClassName="text-sm" sizes="33vw" />
                     </button>

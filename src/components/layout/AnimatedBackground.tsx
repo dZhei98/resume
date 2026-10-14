@@ -58,11 +58,11 @@ const AnimatedBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Base gradient */}
-      <div className="absolute inset-0 bg-[#141414]" />
+      <div className="absolute inset-0 bg-netflix-bg" />
 
       {/* Stationary gradient orbs */}
       <div
-        className="absolute -top-[10%] -left-[5%] w-[70%] h-[70%] rounded-full"
+        className="absolute top-[-10%] left-[-5%] w-[70%] h-[70%] rounded-full"
         style={{
           background: "radial-gradient(circle, rgba(229, 9, 20, 0.35) 0%, transparent 60%)",
           filter: "blur(100px)",
@@ -70,7 +70,7 @@ const AnimatedBackground: React.FC = () => {
       />
 
       <div
-        className="absolute -bottom-[15%] -right-[10%] w-[65%] h-[65%] rounded-full"
+        className="absolute bottom-[-15%] right-[-10%] w-[65%] h-[65%] rounded-full"
         style={{
           background: "radial-gradient(circle, rgba(229, 9, 20, 0.3) 0%, transparent 60%)",
           filter: "blur(120px)",
@@ -181,7 +181,7 @@ const AnimatedBackground: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute w-[1px] h-[1px] bg-white rounded-full"
+        className="absolute w-px h-px bg-white rounded-full"
         style={{
           boxShadow: "0 0 4px 1px rgba(255,255,255,0.5), -15px 0 10px rgba(255,255,255,0.2)",
         }}

@@ -53,7 +53,7 @@ const Billboard: React.FC<{ title: Title; profile: ProfileConfig }> = ({ title, 
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-t from-netflix-bg via-netflix-bg/40 to-transparent"
+        className="absolute inset-x-0 bottom-0 h-[35%] bg-linear-to-t from-netflix-bg via-netflix-bg/40 to-transparent"
       />
 
       <div className="absolute bottom-[32%] left-gutter w-[40%] space-y-4 lg:w-[36%]">
@@ -62,12 +62,12 @@ const Billboard: React.FC<{ title: Title; profile: ProfileConfig }> = ({ title, 
         </h1>
         {isAbout ? (
           title.subtitle ? (
-            <p className="text-[length:max(0.95rem,1.5vw)] font-semibold leading-snug drop-shadow">
+            <p className="text-[max(0.95rem,1.5vw)] font-semibold leading-snug drop-shadow-sm">
               {title.subtitle}
             </p>
           ) : null
         ) : title.rank ? (
-          <p className="flex items-center gap-3 text-[length:max(0.95rem,1.5vw)] font-semibold drop-shadow">
+          <p className="flex items-center gap-3 text-[max(0.95rem,1.5vw)] font-semibold drop-shadow-sm">
             <TopBadge />
             <span>
               #{title.rank} in Hackathons Today
@@ -75,9 +75,9 @@ const Billboard: React.FC<{ title: Title; profile: ProfileConfig }> = ({ title, 
           </p>
         ) : null}
         {title.domain && (
-          <p className="text-[length:max(0.9rem,1.2vw)] font-semibold drop-shadow">{title.domain}</p>
+          <p className="text-[max(0.9rem,1.2vw)] font-semibold drop-shadow-sm">{title.domain}</p>
         )}
-        <p className="line-clamp-3 text-[length:max(0.9rem,1.2vw)] leading-snug drop-shadow">
+        <p className="line-clamp-3 text-[max(0.9rem,1.2vw)] leading-snug drop-shadow-sm">
           {title.synopsis}
         </p>
         <div className="flex flex-wrap gap-3">
@@ -106,7 +106,7 @@ const Billboard: React.FC<{ title: Title; profile: ProfileConfig }> = ({ title, 
         </div>
       </div>
 
-      <div className="absolute bottom-[32%] right-0 border-l-[3px] border-white/80 bg-[#333]/60 py-1 pl-3 pr-[4vw] text-[length:max(0.8rem,1.1vw)]">
+      <div className="absolute bottom-[32%] right-0 border-l-[3px] border-white/80 bg-[#333]/60 py-1 pl-3 pr-[4vw] text-[max(0.8rem,1.1vw)]">
         {KIND_LABEL[title.kind]}
       </div>
     </section>

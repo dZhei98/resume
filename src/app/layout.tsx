@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${netflixSans.variable} ${displayFont.variable} antialiased bg-[#141414] text-neutral-100`}
+        className={`${netflixSans.variable} ${displayFont.variable} antialiased bg-netflix-bg text-neutral-100`}
       >
         <script
           type="application/ld+json"

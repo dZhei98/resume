@@ -41,7 +41,7 @@ export const NfButton: React.FC<NfButtonProps> = ({
   children,
   ariaLabel,
 }) => {
-  const classes = `inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${className}`;
+  const classes = `inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-sm font-semibold transition-colors focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${className}`;
   const content = (
     <>
       {icon}
@@ -106,7 +106,7 @@ export const CircleButton: React.FC<CircleButtonProps> = ({
       event.stopPropagation();
       onClick();
     }}
-    className={`inline-flex shrink-0 items-center justify-center rounded-full border-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+    className={`inline-flex shrink-0 items-center justify-center rounded-full border-2 transition-colors focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
       size === "sm" ? "h-8 w-8 text-base" : "h-10 w-10 text-lg"
     } ${
       solid

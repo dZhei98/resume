@@ -17,7 +17,7 @@ import {
   IoSwapHorizontal,
 } from "react-icons/io5";
 
-const ITEM_CLASSES = `flex items-center gap-2.5 rounded-sm px-3 py-1.5 text-[13px] text-white hover:underline ${FOCUS_RING}`;
+const ITEM_CLASSES = `flex items-center gap-2.5 rounded-xs px-3 py-1.5 text-[13px] text-white hover:underline ${FOCUS_RING}`;
 
 const ProfileMenu: React.FC<{ profileId: ProfileId; compact?: boolean }> = ({
   profileId,
@@ -32,7 +32,7 @@ const ProfileMenu: React.FC<{ profileId: ProfileId; compact?: boolean }> = ({
       <button
         {...triggerProps}
         aria-label={`Account menu, ${profile.name}`}
-        className={`flex items-center gap-2.5 rounded ${FOCUS_RING}`}
+        className={`flex items-center gap-2.5 rounded-sm ${FOCUS_RING}`}
       >
         <ProfileAvatar profile={profile} size={compact ? 28 : 32} />
         {!compact && (

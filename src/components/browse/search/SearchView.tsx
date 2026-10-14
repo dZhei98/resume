@@ -62,7 +62,7 @@ const CategoryBar: React.FC<{
           type="button"
           aria-pressed={active === category.id}
           onClick={() => onToggle(category.id)}
-          className={`rounded-sm hover:underline ${
+          className={`rounded-xs hover:underline ${
             active === category.id ? "font-semibold text-white underline" : "text-netflix-light"
           } ${FOCUS_RING}`}
         >
@@ -210,7 +210,7 @@ const SearchScreen: React.FC<{ urlQuery: string; category: CategoryId | null }> 
             value={value}
             onChange={(event) => setValue(event.target.value)}
             placeholder="Search by keyword, category, or date"
-            className="h-10 w-full rounded bg-[#333] pl-10 pr-10 text-base text-white placeholder:text-netflix-muted focus:outline-none focus:ring-1 focus:ring-white/50 md:h-14 md:pl-14 md:pr-14 md:text-lg"
+            className="h-10 w-full rounded-sm bg-[#333] pl-10 pr-10 text-base text-white placeholder:text-netflix-muted focus:outline-hidden focus:ring-1 focus:ring-white/50 md:h-14 md:pl-14 md:pr-14 md:text-lg"
           />
           {value && (
             <button

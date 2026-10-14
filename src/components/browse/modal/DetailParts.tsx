@@ -12,7 +12,7 @@ import React from "react";
 import { IoLogoLinkedin, IoPlay } from "react-icons/io5";
 
 export const FOCUS_RING =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+  "focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
 
 const isExternalUrl = (url: string) => /^https?:\/\//.test(url);
 
@@ -121,7 +121,7 @@ export const SecondaryAction: React.FC<{ title: Title; size: "md" | "lg"; classN
       size={size}
       href={getLinkedInUrl()}
       icon={<IoLogoLinkedin aria-hidden className={size === "lg" ? "text-2xl md:text-3xl" : "text-2xl"} />}
-      className={`bg-[rgba(42,42,42,0.75)] backdrop-blur-sm hover:bg-[rgba(70,70,70,0.85)] ${className}`}
+      className={`bg-[rgba(42,42,42,0.75)] backdrop-blur-xs hover:bg-[rgba(70,70,70,0.85)] ${className}`}
     >
       LinkedIn
     </NfButton>

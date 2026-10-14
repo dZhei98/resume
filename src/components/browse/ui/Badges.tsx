@@ -6,7 +6,7 @@ export const LabelTag: React.FC<{ label: string; className?: string }> = ({
   className = "",
 }) => (
   <span
-    className={`inline-block whitespace-nowrap rounded-sm bg-netflix-red px-1.5 py-0.5 text-[10px] font-semibold uppercase leading-none tracking-wide text-white shadow ${className}`}
+    className={`inline-block whitespace-nowrap rounded-xs bg-netflix-red px-1.5 py-0.5 text-[10px] font-semibold uppercase leading-none tracking-wide text-white shadow-sm ${className}`}
   >
     {label}
   </span>

@@ -19,7 +19,7 @@ export const MetaLine: React.FC<{ title: Title; className?: string }> = ({
     >
       {highlight && <span className="font-semibold text-netflix-green">{highlight}</span>}
       {title.yearLabel && <span>{title.yearLabel}</span>}
-      <span className="rounded-sm border border-white/40 px-1.5 text-[11px] uppercase leading-5">
+      <span className="rounded-xs border border-white/40 px-1.5 text-[11px] uppercase leading-5">
         {KIND_LABEL[title.kind]}
       </span>
       {title.skills ? (

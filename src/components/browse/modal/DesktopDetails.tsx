@@ -39,7 +39,7 @@ const SimilarCard: React.FC<{ title: Title; onOpen: () => void }> = ({ title, on
     <button
       type="button"
       aria-label={title.name}
-      className={`relative block aspect-video w-full focus-visible:outline-offset-[-2px] ${FOCUS_RING}`}
+      className={`relative block aspect-video w-full focus-visible:-outline-offset-2 ${FOCUS_RING}`}
     >
       <TitleArt title={title} nameClassName="text-lg" sizes="280px" />
     </button>
@@ -65,7 +65,7 @@ const DesktopDetails: React.FC<DesktopDetailsProps> = ({ title, headingId, onClo
     <>
       <div className="relative aspect-video">
         <TitleMedia title={title} sizes="850px" />
-        <div className="absolute inset-0 bg-gradient-to-t from-netflix-surface via-netflix-surface/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-netflix-surface via-netflix-surface/20 to-transparent" />
         <button
           type="button"
           aria-label="Close"
@@ -111,7 +111,7 @@ const DesktopDetails: React.FC<DesktopDetailsProps> = ({ title, headingId, onClo
             <h3 id={`${baseId}-episodes`} className={SECTION_HEADING}>
               Episodes
             </h3>
-            <span className="rounded border border-[#4d4d4d] bg-[#242424] px-4 py-2 text-base font-semibold text-white">
+            <span className="rounded-sm border border-[#4d4d4d] bg-[#242424] px-4 py-2 text-base font-semibold text-white">
               {title.yearLabel ?? KIND_LABEL[title.kind]}
             </span>
           </div>
@@ -124,7 +124,7 @@ const DesktopDetails: React.FC<DesktopDetailsProps> = ({ title, headingId, onClo
                 }`}
               >
                 <span className="text-center text-2xl text-netflix-muted">{index + 1}</span>
-                <div className="relative aspect-video overflow-hidden rounded">
+                <div className="relative aspect-video overflow-hidden rounded-sm">
                   <TitleArt title={title} showName={false} showLogoBadge={false} sizes="136px" />
                 </div>
                 <div className="min-w-0 space-y-1">

@@ -31,13 +31,13 @@ const NotificationsMenu: React.FC = () => {
       <button
         {...triggerProps}
         aria-label={count ? `Notifications, ${count} new` : "Notifications"}
-        className={`relative flex h-9 w-9 items-center justify-center rounded-sm text-white ${FOCUS_RING}`}
+        className={`relative flex h-9 w-9 items-center justify-center rounded-xs text-white ${FOCUS_RING}`}
       >
         <IoNotificationsOutline aria-hidden className="h-6 w-6" />
         {count > 0 && (
           <span
             aria-hidden
-            className="absolute right-0.5 top-0.5 flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-netflix-red px-1 text-[10px] font-bold leading-none text-white"
+            className="absolute right-0.5 top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-netflix-red px-1 text-[10px] font-bold leading-none text-white"
           >
             {count}
           </span>
@@ -46,7 +46,7 @@ const NotificationsMenu: React.FC = () => {
 
       <Dropdown
         open={open}
-        className="inset-x-4 md:inset-x-auto md:right-0 md:w-[22rem]"
+        className="inset-x-4 md:inset-x-auto md:right-0 md:w-88"
         caretClassName="right-[51px] md:right-[11px]"
       >
         {count ? (
@@ -61,7 +61,7 @@ const NotificationsMenu: React.FC = () => {
                   }}
                   className={`flex w-full items-center gap-3 p-4 text-left transition-colors hover:bg-white/5 ${FOCUS_RING_INSET}`}
                 >
-                  <span className="relative aspect-video w-28 shrink-0 overflow-hidden rounded">
+                  <span className="relative aspect-video w-28 shrink-0 overflow-hidden rounded-sm">
                     <TitleArt title={title} showName={false} sizes="112px" />
                   </span>
                   <span className="min-w-0 text-sm leading-snug">

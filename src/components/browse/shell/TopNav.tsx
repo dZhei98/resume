@@ -30,7 +30,7 @@ const TopNav: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-40 hidden bg-gradient-to-b from-black/80 to-transparent transition-colors duration-[400ms] md:block ${
+        className={`fixed inset-x-0 top-0 z-40 hidden bg-linear-to-b from-black/80 to-transparent transition-colors duration-400 md:block ${
           scrolled ? "bg-netflix-bg" : ""
         }`}
       >
@@ -38,7 +38,7 @@ const TopNav: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
           <Link
             href={base}
             aria-label="Joshua Nee home"
-            className={`mr-6 shrink-0 rounded-sm lg:mr-8 ${FOCUS_RING}`}
+            className={`mr-6 shrink-0 rounded-xs lg:mr-8 ${FOCUS_RING}`}
           >
             <Wordmark className="text-[1.75rem] lg:text-[2.1rem]" />
           </Link>
@@ -51,7 +51,7 @@ const TopNav: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
                   <Link
                     href={item.href}
                     aria-current={item.active ? "page" : undefined}
-                    className={`whitespace-nowrap rounded-sm text-sm transition-colors duration-[400ms] ${
+                    className={`whitespace-nowrap rounded-xs text-sm transition-colors duration-400 ${
                       item.active
                         ? "cursor-default font-semibold text-white"
                         : "text-netflix-light hover:text-netflix-muted"

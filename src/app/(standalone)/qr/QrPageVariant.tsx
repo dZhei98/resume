@@ -105,7 +105,7 @@ export default function QrPageVariant({
             animate={{ x: [0, 16, -12, 0], opacity: [0.45, 0.6, 0.5, 0.45] }}
             transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
           />
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(transparent_0%,rgba(255,255,255,0.035)_50%,transparent_100%)] bg-[length:100%_10px] opacity-20" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(transparent_0%,rgba(255,255,255,0.035)_50%,transparent_100%)] bg-size-[100%_10px] opacity-20" />
 
           <section className="hidden flex-1 items-center gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(320px,420px)_minmax(0,1fr)]">
             <div className="space-y-4">
@@ -115,10 +115,10 @@ export default function QrPageVariant({
                   className="group relative overflow-hidden rounded-[30px] border border-red-500/25 bg-black/45 p-4 shadow-[0_0_36px_rgba(239,68,68,0.16),0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-xl"
                   style={{ transform: LEFT_CARD_TRANSFORM, transformOrigin: "right center" }}
                 >
-                  <div className="pointer-events-none absolute inset-[1px] rounded-[28px] bg-[linear-gradient(160deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_30%,rgba(239,68,68,0.16)_100%)] opacity-80" />
+                  <div className="pointer-events-none absolute inset-px rounded-[28px] bg-[linear-gradient(160deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_30%,rgba(239,68,68,0.16)_100%)] opacity-80" />
                   <div className="pointer-events-none absolute -left-10 top-8 h-28 w-28 rounded-full bg-red-500/20 blur-3xl" />
                   <div className="pointer-events-none absolute -inset-px rounded-[30px] border border-red-200/10" />
-                  <div className={`relative mb-4 aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br ${LOGO_BACKDROP} ring-1 ring-red-200/20`}>
+                  <div className={`relative mb-4 aspect-4/3 overflow-hidden rounded-2xl bg-linear-to-br ${LOGO_BACKDROP} ring-1 ring-red-200/20`}>
                     <Image src={item.image.src} alt={item.image.alt} fill className="object-contain p-5 transition duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_42%),linear-gradient(to_top,rgba(0,0,0,0.38),transparent_55%)]" />
                   </div>
@@ -132,17 +132,17 @@ export default function QrPageVariant({
               <header className="text-center">
                 <div className="relative inline-flex flex-col items-center">
                   <div className="pointer-events-none absolute inset-x-[18%] top-4 h-8 rounded-full bg-red-500/20 blur-2xl" />
-                  <p className="relative bg-gradient-to-b from-white via-white to-red-100 bg-clip-text text-[clamp(2.35rem,5.4vw,5rem)] font-bold uppercase tracking-[0.32em] text-transparent drop-shadow-[0_8px_28px_rgba(255,255,255,0.12)]">
+                  <p className="relative bg-linear-to-b from-white via-white to-red-100 bg-clip-text text-[clamp(2.35rem,5.4vw,5rem)] font-bold uppercase tracking-[0.32em] text-transparent drop-shadow-[0_8px_28px_rgba(255,255,255,0.12)]">
                     Joshua Nee
                   </p>
                 </div>
-                <div className="mx-auto mt-3 h-px w-32 bg-gradient-to-r from-transparent via-red-500/90 to-transparent" />
+                <div className="mx-auto mt-3 h-px w-32 bg-linear-to-r from-transparent via-red-500/90 to-transparent" />
                 <p className="mt-3 text-xs uppercase tracking-[0.45em] text-red-300/90 sm:text-sm">{SITE_URL}</p>
                 <QrVariantToggle activeVariant={activeVariant} />
               </header>
 
               <div className="group relative mx-auto flex items-center justify-center overflow-hidden rounded-[30px] border border-red-500/25 bg-black/45 p-5 shadow-[0_0_36px_rgba(239,68,68,0.16),0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-xl">
-                <div className="pointer-events-none absolute inset-[1px] rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_32%,rgba(239,68,68,0.16)_100%)] opacity-80" />
+                <div className="pointer-events-none absolute inset-px rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_32%,rgba(239,68,68,0.16)_100%)] opacity-80" />
                 <div className="pointer-events-none absolute left-1/2 top-0 h-28 w-36 -translate-x-1/2 rounded-full bg-red-500/20 blur-3xl" />
                 <div className="pointer-events-none absolute -inset-px rounded-[30px] border border-red-200/10" />
                 <motion.div
@@ -153,7 +153,7 @@ export default function QrPageVariant({
                 <Link
                   href={destinationHref}
                   aria-label={qrAriaLabel}
-                  className="relative block h-[320px] w-[320px] overflow-hidden rounded-[28px] p-2 shadow-[0_0_50px_rgba(229,9,20,0.18)] transition hover:scale-[1.01] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300 xl:h-[360px] xl:w-[360px]"
+                  className="relative block h-[320px] w-[320px] overflow-hidden rounded-[28px] p-2 shadow-[0_0_50px_rgba(229,9,20,0.18)] transition hover:scale-[1.01] focus:outline-hidden focus-visible:ring-2 focus-visible:ring-red-300 xl:h-[360px] xl:w-[360px]"
                 >
                   {qrImageSrc ? (
                     <Image src={qrImageSrc} alt={qrAlt} fill className="object-contain p-5" unoptimized onError={handleQrAssetError} />
@@ -174,10 +174,10 @@ export default function QrPageVariant({
                   className="group relative overflow-hidden rounded-[30px] border border-red-500/25 bg-black/45 p-4 shadow-[0_0_36px_rgba(239,68,68,0.16),0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-xl"
                   style={{ transform: RIGHT_CARD_TRANSFORM, transformOrigin: "left center" }}
                 >
-                  <div className="pointer-events-none absolute inset-[1px] rounded-[28px] bg-[linear-gradient(200deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_30%,rgba(239,68,68,0.16)_100%)] opacity-80" />
+                  <div className="pointer-events-none absolute inset-px rounded-[28px] bg-[linear-gradient(200deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_30%,rgba(239,68,68,0.16)_100%)] opacity-80" />
                   <div className="pointer-events-none absolute -right-10 top-8 h-28 w-28 rounded-full bg-red-500/20 blur-3xl" />
                   <div className="pointer-events-none absolute -inset-px rounded-[30px] border border-red-200/10" />
-                  <div className={`relative mb-4 aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br ${LOGO_BACKDROP} ring-1 ring-red-200/20`}>
+                  <div className={`relative mb-4 aspect-4/3 overflow-hidden rounded-2xl bg-linear-to-br ${LOGO_BACKDROP} ring-1 ring-red-200/20`}>
                     <Image src={item.image.src} alt={item.image.alt} fill className="object-contain p-5 transition duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_42%),linear-gradient(to_top,rgba(0,0,0,0.38),transparent_55%)]" />
                   </div>
@@ -191,8 +191,8 @@ export default function QrPageVariant({
           <section className="flex flex-1 flex-col items-center justify-center gap-4 lg:hidden">
             <div className="grid w-full max-w-[320px] grid-cols-2 gap-3">
               {experienceItems.map((item) => (
-                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm">
-                  <div className={`relative aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br ${LOGO_BACKDROP}`}>
+                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-xs">
+                  <div className={`relative aspect-4/3 overflow-hidden rounded-xl bg-linear-to-br ${LOGO_BACKDROP}`}>
                     <Image src={item.image.src} alt={item.image.alt} fill className="object-contain p-3" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_42%),linear-gradient(to_top,rgba(0,0,0,0.28),transparent_55%)]" />
                   </div>
@@ -205,22 +205,22 @@ export default function QrPageVariant({
               <header className="text-center">
                 <div className="relative inline-flex flex-col items-center">
                   <div className="pointer-events-none absolute inset-x-[16%] top-3 h-7 rounded-full bg-red-500/20 blur-2xl" />
-                  <p className="relative whitespace-nowrap bg-gradient-to-b from-white via-white to-red-100 bg-clip-text text-[clamp(1.2rem,5.1vw,2.35rem)] font-bold uppercase tracking-[0.12em] text-transparent drop-shadow-[0_8px_28px_rgba(255,255,255,0.12)]">
+                  <p className="relative whitespace-nowrap bg-linear-to-b from-white via-white to-red-100 bg-clip-text text-[clamp(1.2rem,5.1vw,2.35rem)] font-bold uppercase tracking-[0.12em] text-transparent drop-shadow-[0_8px_28px_rgba(255,255,255,0.12)]">
                     Joshua Nee
                   </p>
                 </div>
-                <div className="mx-auto mt-2 h-px w-24 bg-gradient-to-r from-transparent via-red-500/90 to-transparent" />
+                <div className="mx-auto mt-2 h-px w-24 bg-linear-to-r from-transparent via-red-500/90 to-transparent" />
                 <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-red-300/90">{SITE_URL}</p>
                 <QrVariantToggle activeVariant={activeVariant} />
               </header>
 
               <div className="relative w-full max-w-[286px] overflow-hidden rounded-[30px] border border-red-500/25 bg-black/45 p-4 shadow-[0_0_36px_rgba(239,68,68,0.16),0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-xl">
-                <div className="pointer-events-none absolute inset-[1px] rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_32%,rgba(239,68,68,0.16)_100%)] opacity-80" />
+                <div className="pointer-events-none absolute inset-px rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02)_32%,rgba(239,68,68,0.16)_100%)] opacity-80" />
                 <div className="pointer-events-none absolute -inset-px rounded-[30px] border border-red-200/10" />
                 <Link
                   href={destinationHref}
                   aria-label={qrAriaLabel}
-                  className="relative block aspect-square overflow-hidden rounded-[24px] p-2 transition hover:scale-[1.01] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
+                  className="relative block aspect-square overflow-hidden rounded-[24px] p-2 transition hover:scale-[1.01] focus:outline-hidden focus-visible:ring-2 focus-visible:ring-red-300"
                 >
                   {qrImageSrc ? (
                     <Image src={qrImageSrc} alt={qrAlt} fill className="object-contain p-4" unoptimized onError={handleQrAssetError} />
@@ -236,8 +236,8 @@ export default function QrPageVariant({
 
             <div className="grid w-full max-w-[320px] grid-cols-2 gap-3">
               {educationItems.map((item) => (
-                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm">
-                  <div className={`relative aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br ${LOGO_BACKDROP}`}>
+                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-xs">
+                  <div className={`relative aspect-4/3 overflow-hidden rounded-xl bg-linear-to-br ${LOGO_BACKDROP}`}>
                     <Image src={item.image.src} alt={item.image.alt} fill className="object-contain p-3" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_42%),linear-gradient(to_top,rgba(0,0,0,0.28),transparent_55%)]" />
                   </div>

@@ -128,7 +128,7 @@ const SearchBox: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
           autoComplete="off"
           spellCheck={false}
           enterKeyHint="search"
-          className="h-full min-w-0 flex-1 bg-transparent pr-2 text-sm text-white placeholder:text-netflix-muted focus:outline-none"
+          className="h-full min-w-0 flex-1 bg-transparent pr-2 text-sm text-white placeholder:text-netflix-muted focus:outline-hidden"
         />
         {value && (
           <button

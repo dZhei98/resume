@@ -153,7 +153,7 @@ const ModalShell: React.FC<ModalShellProps> = ({ title, isDesktop, onClose }) =>
           requestClose();
         }
       }}
-      className={`fixed inset-0 z-[60] overflow-y-auto overscroll-contain ${
+      className={`fixed inset-0 z-60 overflow-y-auto overscroll-contain ${
         isDesktop ? "bg-black/70" : "bg-netflix-bg"
       }`}
     >
@@ -166,8 +166,8 @@ const ModalShell: React.FC<ModalShellProps> = ({ title, isDesktop, onClose }) =>
         {...panelMotion}
         className={
           isDesktop
-            ? "relative mx-auto my-8 w-[min(850px,94vw)] overflow-hidden rounded-lg bg-netflix-surface shadow-2xl outline-none"
-            : "min-h-full pb-10 outline-none"
+            ? "relative mx-auto my-8 w-[min(850px,94vw)] overflow-hidden rounded-lg bg-netflix-surface shadow-2xl outline-hidden"
+            : "min-h-full pb-10 outline-hidden"
         }
       >
         {isDesktop ? (

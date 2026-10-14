@@ -23,12 +23,12 @@ const HeroCard: React.FC<{ title: Title; profile: ProfileConfig }> = ({ title, p
           background: `linear-gradient(180deg, ${tintAlpha(title.tint, 0.55)} 0%, #141414 70vh)`,
         }}
       />
-      <div className="relative mx-auto aspect-[2/3] w-[86%] max-w-sm overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+      <div className="relative mx-auto aspect-2/3 w-[86%] max-w-sm overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
         <button
           type="button"
           aria-label={`More info about ${title.name}`}
           onClick={() => openTitle(title.slug)}
-          className="group/tile absolute inset-0 rounded-[inherit] focus-visible:outline-none"
+          className="group/tile absolute inset-0 rounded-[inherit] focus-visible:outline-hidden"
         >
           {isAbout && title.image ? (
             <Image
@@ -44,7 +44,7 @@ const HeroCard: React.FC<{ title: Title; profile: ProfileConfig }> = ({ title, p
           )}
           <span
             aria-hidden
-            className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black via-black/60 to-transparent"
+            className="absolute inset-x-0 bottom-0 h-3/5 bg-linear-to-t from-black via-black/60 to-transparent"
           />
           <span aria-hidden className={FOCUS_RING} />
         </button>

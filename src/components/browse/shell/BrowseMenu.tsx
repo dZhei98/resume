@@ -23,7 +23,7 @@ const BrowseMenu: React.FC<{ items: readonly NavItem[]; className?: string }> = 
     <div {...rootProps} className={`relative ${className}`}>
       <button
         {...triggerProps}
-        className={`flex items-center gap-1.5 rounded-sm text-sm font-semibold text-white ${FOCUS_RING}`}
+        className={`flex items-center gap-1.5 rounded-xs text-sm font-semibold text-white ${FOCUS_RING}`}
       >
         Browse
         <IoCaretDown
@@ -32,7 +32,7 @@ const BrowseMenu: React.FC<{ items: readonly NavItem[]; className?: string }> = 
         />
       </button>
 
-      <Dropdown open={open} className="left-1/2 -ml-32 w-64" caretClassName="left-1/2 -ml-[7px]">
+      <Dropdown open={open} className="left-1/2 -ml-32 w-64" caretClassName="left-1/2 ml-[-7px]">
         <ul className="py-1.5">
           {items.map((item) => (
             <li key={item.href}>

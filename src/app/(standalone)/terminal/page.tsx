@@ -163,7 +163,7 @@ const TerminalPage = () => {
               <PromptLine text="cat /University/Masters/Carnegie Mellon University" delay={0.66} />
               <TerminalOutput>
                 <pre
-                  className="text-slate-200 leading-relaxed whitespace-pre-wrap break-words animate-line-in motion-reduce:animate-none"
+                  className="text-slate-200 leading-relaxed whitespace-pre-wrap wrap-break-word animate-line-in motion-reduce:animate-none"
                   style={{ animationDelay: "0.72s" }}
                 >{academicText}</pre>
               </TerminalOutput>

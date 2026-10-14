@@ -4,7 +4,7 @@ import React from "react";
 import { IoPlayCircleOutline } from "react-icons/io5";
 
 export const FOCUS_RING =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+  "focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
 
 type TileProps = {
   title: Title;
@@ -18,9 +18,9 @@ export const TitleListRow: React.FC<TileProps> = ({ title, onSelect, className =
     type="button"
     aria-label={title.name}
     onClick={() => onSelect(title.slug)}
-    className={`flex w-full items-center gap-3 rounded text-left transition-colors active:bg-white/10 ${FOCUS_RING} ${className}`}
+    className={`flex w-full items-center gap-3 rounded-sm text-left transition-colors active:bg-white/10 ${FOCUS_RING} ${className}`}
   >
-    <div className="relative aspect-video w-36 shrink-0 overflow-hidden rounded">
+    <div className="relative aspect-video w-36 shrink-0 overflow-hidden rounded-sm">
       <TitleArt title={title} showName={false} sizes="144px" />
     </div>
     <span className="flex-1 text-sm font-semibold text-white">{title.name}</span>

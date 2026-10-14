@@ -88,7 +88,7 @@ const BrowseHome: React.FC<{ profileId: ProfileId; category?: CategoryId }> = ({
       <TintBackdrop>
         {hero && <HeroCard title={hero} profile={profile} />}
         {hero && <Billboard title={hero} profile={profile} />}
-        <div className="relative z-10 mt-8 space-y-6 pb-10 md:-mt-[10vw] md:space-y-[3vw] md:pb-[4vw]">
+        <div className="relative z-10 mt-8 space-y-6 pb-10 md:mt-[-10vw] md:space-y-[3vw] md:pb-[4vw]">
           <AnimatePresence initial={false}>
             {rows.map((row) => (
               <motion.div

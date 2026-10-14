@@ -18,7 +18,7 @@ type MobileHeaderProps = {
   collapsed: boolean;
 };
 
-const SURFACE = "bg-netflix-bg/95 backdrop-blur";
+const SURFACE = "bg-netflix-bg/95 backdrop-blur-sm";
 
 const MobileHeader: React.FC<MobileHeaderProps> = ({
   profileId,
@@ -39,7 +39,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
           scrolled ? SURFACE : "bg-transparent"
         }`}
       >
-        <Link href={base} className={`flex min-w-0 items-center gap-2.5 rounded-sm ${FOCUS_RING}`}>
+        <Link href={base} className={`flex min-w-0 items-center gap-2.5 rounded-xs ${FOCUS_RING}`}>
           <Monogram className="text-4xl" />
           <span className="truncate text-lg font-bold text-white">For {profile.name}s</span>
         </Link>
@@ -47,7 +47,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
           <Link
             href={`${base}/search`}
             aria-label="Search"
-            className={`flex h-9 w-9 shrink-0 items-center justify-center rounded text-white ${FOCUS_RING}`}
+            className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-sm text-white ${FOCUS_RING}`}
           >
             <IoSearchOutline aria-hidden className="h-6 w-6" />
           </Link>
