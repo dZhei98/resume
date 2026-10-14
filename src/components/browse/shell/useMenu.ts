@@ -13,12 +13,14 @@ export const useMenu = () => {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const pointerTypeRef = useRef("");
   const pathname = usePathname();
+  const [menuPathname, setMenuPathname] = useState(pathname);
+
+  if (menuPathname !== pathname) {
+    setMenuPathname(pathname);
+    setOpen(false);
+  }
 
   const close = useCallback(() => setOpen(false), []);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     if (closeTimer === null) {

@@ -1,7 +1,8 @@
 "use client";
 
+import { useHydrated } from "@/hooks/useHydrated";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface Particle {
   id: number;
@@ -24,36 +25,35 @@ interface Spark {
   delay: number;
 }
 
+const generateParticles = (): Particle[] =>
+  // Generate slow floating particles
+  Array.from({ length: 50 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 4 + 1,
+    duration: Math.random() * 20 + 15,
+    delay: Math.random() * 5,
+    opacity: Math.random() * 0.3 + 0.1,
+  }));
+
+const generateSparks = (): Spark[] =>
+  // Generate fast-moving sparks
+  Array.from({ length: 25 }, (_, i) => ({
+    id: i,
+    startX: Math.random() * 100,
+    startY: Math.random() * 100,
+    endX: Math.random() * 100,
+    endY: Math.random() * 100,
+    size: Math.random() * 2 + 1,
+    duration: Math.random() * 3 + 2, // 2-5 seconds (fast!)
+    delay: Math.random() * 8,
+  }));
+
 const AnimatedBackground: React.FC = () => {
-  const [particles, setParticles] = useState<Particle[]>([]);
-  const [sparks, setSparks] = useState<Spark[]>([]);
-
-  useEffect(() => {
-    // Generate slow floating particles
-    const generatedParticles: Particle[] = Array.from({ length: 50 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 1,
-      duration: Math.random() * 20 + 15,
-      delay: Math.random() * 5,
-      opacity: Math.random() * 0.3 + 0.1,
-    }));
-    setParticles(generatedParticles);
-
-    // Generate fast-moving sparks
-    const generatedSparks: Spark[] = Array.from({ length: 25 }, (_, i) => ({
-      id: i,
-      startX: Math.random() * 100,
-      startY: Math.random() * 100,
-      endX: Math.random() * 100,
-      endY: Math.random() * 100,
-      size: Math.random() * 2 + 1,
-      duration: Math.random() * 3 + 2, // 2-5 seconds (fast!)
-      delay: Math.random() * 8,
-    }));
-    setSparks(generatedSparks);
-  }, []);
+  const hydrated = useHydrated();
+  const [particles] = useState(generateParticles);
+  const [sparks] = useState(generateSparks);
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -86,7 +86,7 @@ const AnimatedBackground: React.FC = () => {
       />
 
       {/* Floating particles */}
-      {particles.map((particle) => (
+      {hydrated && particles.map((particle) => (
         <motion.div
           key={particle.id}
           className="absolute rounded-full bg-red-500/20"
@@ -111,7 +111,7 @@ const AnimatedBackground: React.FC = () => {
       ))}
 
       {/* Fast-moving sparks */}
-      {sparks.map((spark) => (
+      {hydrated && sparks.map((spark) => (
         <motion.div
           key={`spark-${spark.id}`}
           className="absolute rounded-full"

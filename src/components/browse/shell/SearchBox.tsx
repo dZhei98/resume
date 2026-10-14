@@ -1,6 +1,7 @@
 "use client";
 
 import { FOCUS_RING_INSET } from "@/components/browse/shell/styles";
+import { useHydrated } from "@/hooks/useHydrated";
 import type { ProfileId } from "@/types";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useRef, useState } from "react";
@@ -43,16 +44,20 @@ const SearchBox: React.FC<{ profileId: ProfileId }> = ({ profileId }) => {
     return () => window.clearTimeout(timer);
   }, [pendingQuery, navigate]);
 
-  useEffect(() => {
-    if (pathname === searchPath) {
+  const syncPathname = useHydrated() ? pathname : null;
+  const [syncedPathname, setSyncedPathname] = useState<string | null>(null);
+
+  if (syncPathname !== syncedPathname) {
+    setSyncedPathname(syncPathname);
+    if (syncPathname === searchPath) {
       const query = new URLSearchParams(window.location.search).get("q") ?? "";
       setValue((current) => current || query);
-      return;
+    } else if (syncPathname !== null) {
+      setPendingQuery(null);
+      setValue("");
+      setOpen(false);
     }
-    setPendingQuery(null);
-    setValue("");
-    setOpen(false);
-  }, [pathname, searchPath]);
+  }
 
   const handleOpen = () => {
     setOpen(true);

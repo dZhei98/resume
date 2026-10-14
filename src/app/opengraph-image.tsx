@@ -24,7 +24,6 @@ export default async function OpengraphImage() {
           color: "#ffffff",
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={photoSrc}
           alt=""

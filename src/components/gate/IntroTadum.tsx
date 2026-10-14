@@ -1,9 +1,12 @@
 "use client";
 
+import { useHydrated } from "@/hooks/useHydrated";
 import { motion, type Variants } from "framer-motion";
 import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 const BURST_START = 1.35;
+
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 const LETTERS = "JOSHUA NEE".split("");
 const CENTER = (LETTERS.length - 1) / 2;
@@ -119,18 +122,16 @@ const Ident: React.FC = () => (
 );
 
 const IntroTadum: React.FC<{ onDone: () => void }> = ({ onDone }) => {
-  const [phase, setPhase] = useState<Phase>("idle");
+  const hydrated = useHydrated();
+  const motionAllowed = hydrated && !window.matchMedia(REDUCED_MOTION_QUERY).matches;
+  const [skipped, setSkipped] = useState(false);
+  const phase: Phase = !motionAllowed ? "idle" : skipped ? "skip" : "play";
 
-  const skip = useCallback(
-    () => setPhase((current) => (current === "play" ? "skip" : current)),
-    []
-  );
+  const skip = useCallback(() => setSkipped(true), []);
 
   useLayoutEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (window.matchMedia(REDUCED_MOTION_QUERY).matches) {
       onDone();
-    } else {
-      setPhase("play");
     }
   }, [onDone]);
 

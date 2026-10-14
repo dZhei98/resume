@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useHydrated } from "@/hooks/useHydrated";
+import { useState } from "react";
 
 export const useNow = (): Date | null => {
-  const [now, setNow] = useState<Date | null>(null);
+  const hydrated = useHydrated();
+  const [now] = useState(() => new Date());
 
-  useEffect(() => {
-    setNow(new Date());
-  }, []);
-
-  return now;
+  return hydrated ? now : null;
 };
