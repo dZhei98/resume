@@ -6,6 +6,11 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const HOVER_CLOSE_DELAY = 200;
 
+const HOVER_QUERY = "(hover: hover)";
+
+const isHover = (event: React.PointerEvent) =>
+  event.pointerType === "mouse" && window.matchMedia(HOVER_QUERY).matches;
+
 export const useMenu = () => {
   const [open, setOpen] = useState(false);
   const [closeTimer, setCloseTimer] = useState<number | null>(null);
@@ -76,14 +81,14 @@ export const useMenu = () => {
   const rootProps = {
     ref: rootRef,
     onPointerEnter: (event: React.PointerEvent) => {
-      if (event.pointerType !== "mouse") {
+      if (!isHover(event)) {
         return;
       }
       setCloseTimer(null);
       setOpen(true);
     },
     onPointerLeave: (event: React.PointerEvent) => {
-      if (event.pointerType === "mouse") {
+      if (isHover(event)) {
         setCloseTimer(event.timeStamp);
       }
     },
