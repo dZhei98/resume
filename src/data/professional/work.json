@@ -47,9 +47,9 @@
       },
       "tint": "#14305c",
       "description": [
-        "Researched and tested S&P 500 and global index forecasting models in Python to evaluate predictive accuracy",
-        "Backtested long-short momentum and risk-parity strategies, benchmarking Sharpe and volatility",
-        "Validated GARCH and neural network models for return and risk forecasting"
+        "Benchmarked 20+ forecasting models for S&P 500 and global indices, comparing Bayesian VAR, GARCH, and neural approaches through RMSE and MAE for return and volatility predictions",
+        "Backtested long-short momentum and risk-parity strategies over 10+ years, evaluating risk-adjusted performance through Sharpe ratios",
+        "Streamlined time-series experimentation with pandas, scikit-learn, and PyTorch to prepare data, train forecasting models, and compare predictive accuracy"
       ]
     },
     {
@@ -63,8 +63,9 @@
       },
       "tint": "#5e1220",
       "description": [
-        "Prototyped modular Apple Vision Pro components in Swift for 3D interactions and live geolocation tracking, reverse-engineering undocumented visionOS behavior to shorten integration time by 30%",
-        "Prototyped Apple Vision Pro applications within 3 months of US launch, preceding Singapore release by 2 months"
+        "Built Swift prototypes to explore Apple Vision Pro capabilities, combining interactive 3D content, location data, and external API integration",
+        "Investigated undocumented visionOS behavior through reverse-engineering to establish implementation approaches for mixed-reality interactions",
+        "Structured prototype functionality into modular components, shortening integration time by 30% for subsequent development"
       ]
     },
     {
@@ -80,8 +81,7 @@
       "description": [
         "Developed a scheduler for customer self-booking and automated SMS/email confirmations based on shop availability, among 9+ features from a 4-engineer startup later acquired by Highland Creek Partners",
         "Cut data retrieval latency by 80% on tables with 10K+ rows by redesigning query architecture and implementing keyset pagination in Java, jOOQ, and PostgreSQL for application list views",
-        "Gathered and defined client requirements to ship features weekly, maintaining 99% customer retention",
-        "Collaborated in a 4-engineer startup team using React, Java, and PostgreSQL following Scrumban methodology"
+        "Revamped the repair-order closing workflow for mobile and web use, improving cross-device usability and restructuring the code for easier maintenance"
       ]
     },
     {
