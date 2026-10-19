@@ -12,9 +12,10 @@
       },
       "tint": "#6b1a0c",
       "description": [
-        "Owned DashPass' first game backend (gRPC, SDUI, Cassandra, Redis), supporting 8M+ weekly impressions",
-        "Pioneered migration off the legacy stack and established the architecture adopted by all future games",
-        "Engineered AI code generation that cut backend effort by 85%, enabling new contributors to ship independently"
+        "Shipped the first DashPass game backend one week early, serving 2,000 weekly players through Go services, gRPC/Protobuf APIs, Kotlin server-driven UI contracts, and Cassandra storage",
+        "Architected the backend foundation for all future DashPass games, adopted by 5 games, with reusable execution graphs, game-agnostic components, and storage interfaces, requiring just 22 lines of per-game registration code",
+        "Enabled 2 engineers new to the codebase to independently build game backends in 3 days each, versus 6 weeks for the original, by authoring an AI skill that codified the system’s architecture, code templates, and implementation steps",
+        "Diagnosed 4 silent production defects through distributed traces, uncovering subscription-check inconsistencies during platform migration and resolving win-write failures across iOS and Android without a client release"
       ]
     },
     {
@@ -28,10 +29,10 @@
       },
       "tint": "#70341a",
       "description": [
-        "Developed cross-border e-commerce and payment system with Kafka/MySQL, processing 10M+ daily transactions",
-        "Replatformed Golang microservices onto internal library management, cutting fragmented dependencies by 90%",
-        "Restored notification microservice deployability for 100+ internal users in 2 weeks via release workflow redesign",
-        "Spearheaded nationwide updates to request routing and access control systems, supporting 100K+ user requests",
+        "Adapted cross-border order synchronization for a new resell model with fulfillment checks and conditional order creation in Go within a MySQL-backed e-commerce and payment system processing 10M+ daily transactions",
+        "Reduced directly managed dependencies by 90% across 7 Go services by migrating to a library management framework and restructuring service registration, RPC integrations, and Kafka consumers",
+        "Restored notification-service deployments in 2 weeks for 100+ internal users as the service’s primary contact, correcting deployment incompatibilities and repairing its failing test environment",
+        "Orchestrated campaign-specific order flows supporting nearly 100,000 free flag distributions for Singapore National Day through configurable shop/item access controls and notification email links, extensible to future campaigns",
         "Commenced role after early graduation; concluded tenure upon Master's program admission"
       ]
     },
@@ -62,8 +63,7 @@
       },
       "tint": "#5e1220",
       "description": [
-        "Designed 3D interactions and live geo-tracking in Swift by reverse-engineering undocumented VisionOS behaviors",
-        "Architected reusable mixed reality components, reducing future integration time by 30%",
+        "Prototyped modular Apple Vision Pro components in Swift for 3D interactions and live geolocation tracking, reverse-engineering undocumented visionOS behavior to shorten integration time by 30%",
         "Prototyped Apple Vision Pro applications within 3 months of US launch, preceding Singapore release by 2 months"
       ]
     },
@@ -78,11 +78,10 @@
       },
       "tint": "#22204f",
       "description": [
-        "Reduced data retrieval latency by 80% by redesigning pagination and query architecture",
-        "Innovated custom scheduling platform to improve enterprise booking efficiency with advanced availability logic",
+        "Developed a scheduler for customer self-booking and automated SMS/email confirmations based on shop availability, among 9+ features from a 4-engineer startup later acquired by Highland Creek Partners",
+        "Cut data retrieval latency by 80% on tables with 10K+ rows by redesigning query architecture and implementing keyset pagination in Java, jOOQ, and PostgreSQL for application list views",
         "Gathered and defined client requirements to ship features weekly, maintaining 99% customer retention",
-        "Collaborated in a 4-engineer startup team using React, Java, and PostgreSQL following Scrumban methodology",
-        "Drove strategic acquisition by Highland Creek Partners through full-stack engineering enabling 2x user growth"
+        "Collaborated in a 4-engineer startup team using React, Java, and PostgreSQL following Scrumban methodology"
       ]
     },
     {
